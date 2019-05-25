@@ -1,0 +1,56 @@
+.card-header{
+	background-color: #c63333;
+	font-family: 'Lobster', cursive;
+}
+
+.card-title{
+	font-size: 2.5em;
+}
+
+.card-body{
+	background-color: #DA3A3A;
+	font-family: 'Lobster', cursive;
+}
+
+.fa{
+    font-size: 2.5em;
+    animation: animateicon 1s linear infinite;
+    text-shadow: 3px 4px black;
+}
+
+p{
+	font-size: 1.25em;
+	font-family: 'Pathway Gothic One', sans-serif;
+}
+
+input{
+	font-family: 'Pathway Gothic One', sans-serif;
+}
+
+textarea{
+	font-family: 'Pathway Gothic One', sans-serif;
+}
+
+.text-contact{
+	font-size: 1.35em;
+}
+
+.btn-contacto{
+    background-color: #343333;
+}
+
+.btn-contacto:hover {
+    background-color: black;
+}
+
+@keyframes animateicon{
+	0%{
+		transform: translate(-5%,0%)  translate(0,0);
+	}
+	50%{
+		transform: translate(-5%,0%)  translate(10px,0px);
+	}
+	100%{
+		transform: translate(-5%,0%)  translate(0,0);
+	}
+}

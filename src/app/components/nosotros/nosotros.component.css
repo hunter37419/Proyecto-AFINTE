@@ -1,0 +1,37 @@
+.card-header{
+	background-color: #c63333;
+	font-family: 'Lobster', cursive;
+}
+
+.card-title{
+	font-size: 2.5em;
+}
+
+.card-body{
+	background-color: #DA3A3A;
+	font-family: 'Pathway Gothic One', sans-serif;
+}
+
+.card-text{
+	font-size: 1.3em;
+}
+
+.fa{
+	font-size: 3em;
+	color: white;
+	animation: animateicon 1s linear infinite;	
+	text-shadow: 5px 5px black;
+	transition:  color 0.7s ease;
+}
+
+@keyframes animateicon{
+	0%{
+		transform: translate(-5%,0%)  translate(0,0);
+	}
+	50%{
+		transform: translate(-5%,0%)  translate(10px,0px);
+	}
+	100%{
+		transform: translate(-5%,0%)  translate(0,0);
+	}
+}

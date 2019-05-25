@@ -1,0 +1,41 @@
+.modal-content{
+	width: 25em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.modal-title{
+	font-family: 'Lobster', cursive;
+	font-size: 3.3em;
+}
+
+.form-control{
+	border-radius: 12px;
+	font-family: 'Pathway Gothic One', sans-serif;
+	font-size: 1.3em;
+}
+
+.modal-body{
+	background-color: #EEEEEE;
+}
+
+.btn-login{
+	background-color: #c63333;
+	font-family: 'Pathway Gothic One', sans-serif;
+	font-size: 1.3em;
+	border-radius: 12px;
+	color: white;
+}
+
+.btn-login:hover{
+	background-color: red;
+}
+
+.btn-login:active{
+	background-color: #FF5400;
+}
+
+.login_icon{
+	font-size: 10em;
+	color: #6279BE;
+}
