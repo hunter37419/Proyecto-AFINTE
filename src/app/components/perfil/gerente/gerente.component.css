@@ -1,0 +1,25 @@
+button {
+    border-radius: 10px;
+    outline: none;
+    outline-color: transparent;
+}
+
+button:focus {
+    border: 0px;
+    border-right: 10px;
+    outline: none;
+    border-radius: 0px;
+    text-decoration: none;
+}
+
+ul ul li #boton {
+    border: 0px;
+    outline: none;
+    color: black;
+    border-radius: 0px;
+    text-decoration: none;
+}
+
+.datos {
+    margin-left: 200px;
+}
