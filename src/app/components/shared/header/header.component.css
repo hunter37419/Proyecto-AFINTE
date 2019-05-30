@@ -1,5 +1,4 @@
 header {
-    margin-top: 9vh;
     background: url('/assets/img/bg-cobranzas.jpg') no-repeat;
     background: url('/assets/img/cobro.jpg') no-repeat;
     min-height: 100vh;
@@ -20,6 +19,10 @@ img {
     background-color: #FFF1F1;
     background-image: url('/assets/img/fondo2.jpg');
     background-color: transparent(0.5);
+}
+
+.mycontainer{
+    padding-top: 30vh;
 }
 
 @media (max-width: 600px) {

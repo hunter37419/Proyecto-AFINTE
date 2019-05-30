@@ -1,3 +1,4 @@
+/*
 .card-header{
 	background-color: #c63333;
 	font-family: 'Lobster', cursive;
@@ -34,4 +35,13 @@
 	100%{
 		transform: translate(-5%,0%)  translate(0,0);
 	}
+}
+*/
+
+.card{
+	opacity: 0.8;
+}
+
+.fa{
+	font-size: 4em;
 }
