@@ -1,52 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-//Services
-
-//Routes
-import { APP_ROUTING } from './app-routing.module'  ;
-//Components
-
-// import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/shared/header/header.component';
-import { NavComponent } from './components/shared/nav/nav.component';
-import { NosotrosComponent } from './components/nosotros/nosotros.component';
-import { ModalLoginComponent } from './components/modal-login/modal-login.component';
-import { FooterComponent } from './components/shared/footer/footer.component';
-import { ContactComponent } from './components/contact/contact.component';
-import { SidebarComponent } from './components/shared/sidebar/sidebar.component';
-import { GerenteComponent } from './components/perfil/gerente/gerente.component';
-import { HomeComponent } from './components/home/home.component';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { EmpleadosComponent } from './components/mantenimiento/empleados/empleados.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AddCustomerComponent } from './components/add-customer/add-customer.component';
+import { EditCustomerComponent } from './components/edit-customer/edit-customer.component';
+import { ListCustomerComponent } from './components/list-customer/list-customer.component';
 
-//Servicios
+// Importar rutas
+import { ROUTES } from './app.routes';
+import { RouterModule } from '@angular/router';
 
-//
+// Importar ReactiveFormsModule para los formularios
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    NavComponent,
-    NosotrosComponent,
-    ModalLoginComponent,
-    FooterComponent,
-    ContactComponent,
-    GerenteComponent,
-    SidebarComponent,
-    HomeComponent,
-    EmpleadosComponent
+    AddCustomerComponent,
+    EditCustomerComponent,
+    ListCustomerComponent
   ],
   imports: [
-  
     BrowserModule,
-    APP_ROUTING,
-    BrowserAnimationsModule
-    // AppRoutingModule
+    HttpClientModule,
+    RouterModule.forRoot( ROUTES, { useHash: true } ),
+    ReactiveFormsModule
   ],
-  providers: [] ,
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
