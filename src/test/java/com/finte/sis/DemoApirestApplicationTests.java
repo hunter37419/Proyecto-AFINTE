@@ -1,4 +1,4 @@
-package com.ronaldarias.apirest;
+package com.finte.sis;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,4 +1,4 @@
-package com.ronaldarias.apirest.controllers;
+package com.afinte.sis.controllers;
 
 import java.util.List;
 
@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ronaldarias.apirest.models.entity.Customer;
-import com.ronaldarias.apirest.models.service.CustomerService;
+import com.afinte.sis.models.entity.Customer;
+import com.afinte.sis.models.service.CustomerService;
 
 @CrossOrigin(origins = {"http://localhost:4200"})
 @RestController

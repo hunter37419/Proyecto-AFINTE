@@ -1,8 +1,8 @@
-package com.ronaldarias.apirest.models.service;
+package com.afinte.sis.models.service;
 
 import java.util.List;
 
-import com.ronaldarias.apirest.models.entity.Customer;
+import com.afinte.sis.models.entity.Customer;
 
 public interface CustomerService {
 	

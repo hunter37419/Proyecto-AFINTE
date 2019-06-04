@@ -1,8 +1,8 @@
-package com.ronaldarias.apirest.models.dao;
+package com.afinte.sis.models.dao;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.ronaldarias.apirest.models.entity.Customer;
+import com.afinte.sis.models.entity.Customer;
 
 public interface CustomerDAO extends CrudRepository<Customer, Integer> {
 
