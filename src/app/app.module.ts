@@ -18,9 +18,11 @@ import { ContactComponent } from './components/contact/contact.component';
 import { SidebarComponent } from './components/shared/sidebar/sidebar.component';
 import { GerenteComponent } from './components/perfil/gerente/gerente.component';
 import { HomeComponent } from './components/home/home.component';
+import { HttpClientModule} from '@angular/common/http';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EmpleadosComponent } from './components/mantenimiento/empleados/empleados.component';
+import { LibroComponent } from './components/libro/libro.component';
 
 //Servicios
 
@@ -37,10 +39,11 @@ import { EmpleadosComponent } from './components/mantenimiento/empleados/emplead
     GerenteComponent,
     SidebarComponent,
     HomeComponent,
-    EmpleadosComponent
+    EmpleadosComponent,
+    LibroComponent
   ],
   imports: [
-  
+    HttpClientModule,
     BrowserModule,
     APP_ROUTING,
     BrowserAnimationsModule

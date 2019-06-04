@@ -9,7 +9,7 @@ export class NosotrosComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() {  
   }
 
 }

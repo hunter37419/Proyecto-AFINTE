@@ -72,11 +72,22 @@ a>.fa{
   aside{
   	min-height: 5vh;
   }
-  
   main{
-  	margin-top: 10vh;
+  	margin-top: 20%;
   	margin-left: 0;
   }
+
+
+  @media only screen and (max-height: 414px) {
+
+	main{
+	  	margin-top: 12%;
+	  	margin-left: 0;
+	}
+
+	}
+  
+  
   a:hover{
   	background-color: transparent;
   }
@@ -85,6 +96,9 @@ a>.fa{
   }
   .navbar-toggler{
 	display: inline-block;
-}
+	}
 
 }
+
+
+

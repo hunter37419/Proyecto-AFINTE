@@ -6,11 +6,11 @@ import { AppComponent } from './app.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
+
 const routes: Routes = [
-  {path: 'home', component: HomeComponent},
+  {path: 'home', component: HomeComponent,data: {animation: 'HomeView'}},
   {path: 'gerente', component: GerenteComponent},
-  {path: 'contacto', component: ContactComponent},
-  {path: 'nosotros', component: NosotrosComponent},
+  {path: 'nosotros', component: NosotrosComponent,data: {animation: 'NosotrosView'}},
   {path: '**', pathMatch: 'full' , redirectTo: 'home'}
 ];
 

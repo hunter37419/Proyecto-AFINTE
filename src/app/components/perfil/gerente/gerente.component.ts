@@ -23,7 +23,7 @@ export class GerenteComponent implements OnInit {
 
   constructor() {
     
-    console.log(this.mantenimiento);
+    //console.log(this.mantenimiento);
    }
   ngOnInit() {
   }

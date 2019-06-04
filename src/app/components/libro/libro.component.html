@@ -1,0 +1,18 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Codigo</th>
+      <th scope="col">Titulo</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Stock</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let libro of libros">
+      <td>{{ libro.codigo }}</td>
+      <td>{{ libro.titulo }}</td>
+      <td>{{ libro.precio }}</td>
+      <td>{{ libro.stock }}</td>
+    </tr>
+  </tbody>
+</table>

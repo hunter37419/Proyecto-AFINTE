@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Amaranth&display=swap');
+
 .modal-content{
-	width: 25em;
+	width: 24em;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -11,8 +13,12 @@
 
 .form-control{
 	border-radius: 12px;
-	font-family: 'Pathway Gothic One', sans-serif;
-	font-size: 1.3em;
+	//font-family: 'Pathway Gothic One', sans-serif;
+	font-size: 1em;
+}
+
+.form-control::placeholder{
+	color: #B9B9B9;
 }
 
 .modal-body{
@@ -20,22 +26,27 @@
 }
 
 .btn-login{
-	background-color: #c63333;
-	font-family: 'Pathway Gothic One', sans-serif;
-	font-size: 1.3em;
+	background-color: #526AB4;
+	//font-family: 'Pathway Gothic One', sans-serif;
+	font-size: 1.1em;
 	border-radius: 12px;
 	color: white;
 }
 
 .btn-login:hover{
-	background-color: red;
+	background-color: #1E4ACF;
 }
 
 .btn-login:active{
-	background-color: #FF5400;
+	background-color: #353535;
 }
 
 .login_icon{
-	font-size: 10em;
+	font-size: 9em;
 	color: #6279BE;
+}
+
+.logo{
+	font-family: 'Amaranth', sans-serif;
+    color: black !important;
 }
