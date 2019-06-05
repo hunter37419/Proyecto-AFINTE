@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Customer } from '../../model/customer';
-import { CustomerService } from '../../services/customer.service';
 import { Router } from '@angular/router';
-import swal from 'sweetalert2';
+import { Customer } from 'src/app/model/customer';
+import { CustomerService } from 'src/app/services/customer.service';
 
 @Component({
   selector: 'app-list-customer',
@@ -19,26 +18,9 @@ export class ListCustomerComponent implements OnInit {
   }
 
   deleteCustomer(customer: Customer): void {
-    swal({
-      title: 'Está seguro?',
-      text: `¿Seguro desea eliminar al cliente ${customer.firstName} ${
-        customer.lastName
-      }?`,
-      type: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Si, eliminar!',
-      cancelButtonText: 'Cancelar'
-    }).then(result => {
-      if (result.value) {
         this.service.deleteCustomer(customer.id).subscribe(data => {
           this.customers = this.customers.filter(c => c !== customer);
         });
-
-        swal('Eliminado!', 'Se ha eliminado el cliente.', 'success');
-      }
-    });
   }
 
   editCustomer(customer: Customer): void {

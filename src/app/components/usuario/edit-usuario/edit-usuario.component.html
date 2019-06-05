@@ -1,0 +1,27 @@
+<div class="col">
+    <h2 class="text-center">Editar Usuario</h2>
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <label for="usuario">Usuario:</label>
+            <input formControlName="usuario" placeholder="usuario" name="usuario" class="form-control" id="usuario" required>
+        </div>
+
+        <div class="form-group">
+            <label for="contrase">Contraseña:</label>
+            <input formControlName="contrase" placeholder="contrase" name="contrase" class="form-control" id="contrase" required>
+        </div>
+
+        <div class="form-group">
+            <label for="cargo">Cargo:</label>
+            <input type="cargo" formControlName="cargo" placeholder="cargo" name="cargo" class="form-control" id="cargo" required>
+        </div>
+        <div class="form-group">
+            <label for="contra">Nombres:</label>
+            <input type="nombres" formControlName="nombres" placeholder="nombres" name="nombres" class="form-control" id="nombres" required>
+        </div>
+
+        <button class="btn btn-success">Aceptar</button>
+        <button class="btn btn-primary" routerLink="/list-usuario">Regresar</button>
+    </form>
+</div>
