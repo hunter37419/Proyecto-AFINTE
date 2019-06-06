@@ -19,6 +19,7 @@ import { SidebarComponent } from './components/shared/sidebar/sidebar.component'
 import { GerenteComponent } from './components/perfil/gerente/gerente.component';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule} from '@angular/common/http';
+import { ImportacionXlxComponent } from './components/importacion-xlx/importacion-xlx.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EmpleadosComponent } from './components/mantenimiento/empleados/empleados.component';
@@ -40,7 +41,8 @@ import { LibroComponent } from './components/libro/libro.component';
     SidebarComponent,
     HomeComponent,
     EmpleadosComponent,
-    LibroComponent
+    LibroComponent,
+    ImportacionXlxComponent
   ],
   imports: [
     HttpClientModule,
