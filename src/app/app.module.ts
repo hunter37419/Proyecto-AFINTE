@@ -19,6 +19,7 @@ import { SidebarComponent } from './components/shared/sidebar/sidebar.component'
 import { GerenteComponent } from './components/perfil/gerente/gerente.component';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule} from '@angular/common/http';
+import { ImportacionXlxComponent } from './components/importacion-xlx/importacion-xlx.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EmpleadosComponent } from './components/mantenimiento/empleados/empleados.component';
@@ -42,9 +43,13 @@ import { SaldosComponent } from './components/saldos/saldos.component';
     HomeComponent,
     EmpleadosComponent,
     LibroComponent,
+<<<<<<< HEAD
     CarteraComponent,
     CobranzaComponent,
     SaldosComponent, 
+=======
+    ImportacionXlxComponent
+>>>>>>> 66030e257fe8db3d77defca4429b6d7d367396ec
   ],
   imports: [
     HttpClientModule,
