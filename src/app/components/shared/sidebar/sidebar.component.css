@@ -1,5 +1,5 @@
 aside{
-	background-color: #F99819;
+	background-color: rgb(19, 86, 112);
   	min-height: 100vh;
   	-webkit-box-shadow: 9px -3px 14px -9px rgba(0,0,0,0.75);
 	-moz-box-shadow: 9px -3px 14px -9px rgba(0,0,0,0.75);
@@ -28,9 +28,9 @@ a{
 }
 
 nav{
-	background-color: #F79211;
+	background-color:rgb(19, 86, 112);
 	border-bottom: solid;
-	border-color: #EC8C11;
+	border-color: rgb(19, 86, 112);
 }
 
 a:hover{
@@ -39,7 +39,7 @@ a:hover{
 }
 
 .active{
-	background-color: #FFAA00 !important;
+	background-color: rgb(19, 86, 112) !important;
 }
 
 a>*{
@@ -55,7 +55,7 @@ a>.fa{
 }
 
 #btn-nav-toggle>i{
-	color: #F79211;
+	color: rgb(19, 86, 112);
 	font-size: 1.2em;
 }
 

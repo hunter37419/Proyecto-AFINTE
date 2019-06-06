@@ -1,10 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
+import { NgModule, Component } from '@angular/core';
 //Services
 
 //Routes
-import { APP_ROUTING } from './app-routing.module'  ;
+import { APP_ROUTING } from './app-routing.module';
+
 //Components
 
 // import { AppRoutingModule } from './app-routing.module';
@@ -23,8 +23,9 @@ import { HttpClientModule} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EmpleadosComponent } from './components/mantenimiento/empleados/empleados.component';
 import { LibroComponent } from './components/libro/libro.component';
-
-//Servicios
+import { CarteraComponent } from './components/cartera/cartera.component';
+import { CobranzaComponent } from './components/cobranza/cobranza.component';
+import { SaldosComponent } from './components/saldos/saldos.component';
 
 //
 @NgModule({
@@ -40,13 +41,16 @@ import { LibroComponent } from './components/libro/libro.component';
     SidebarComponent,
     HomeComponent,
     EmpleadosComponent,
-    LibroComponent
+    LibroComponent,
+    CarteraComponent,
+    CobranzaComponent,
+    SaldosComponent, 
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
     APP_ROUTING,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
     // AppRoutingModule
   ],
   providers: [] ,
