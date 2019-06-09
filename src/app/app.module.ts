@@ -7,15 +7,16 @@ import { APP_ROUTING } from './app-routing.module';
 
 //Components
 
-// import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { NavComponent } from './components/shared/nav/nav.component';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { ModalLoginComponent } from './components/modal-login/modal-login.component';
-import { FooterComponent } from './components/shared/footer/footer.component';
+
 import { ContactComponent } from './components/contact/contact.component';
 import { SidebarComponent } from './components/shared/sidebar/sidebar.component';
+import { FooterComponent } from './components/shared/footer/footer.component';
 import { GerenteComponent } from './components/perfil/gerente/gerente.component';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule} from '@angular/common/http';
@@ -28,7 +29,25 @@ import { CarteraComponent } from './components/cartera/cartera.component';
 import { CobranzaComponent } from './components/cobranza/cobranza.component';
 import { SaldosComponent } from './components/saldos/saldos.component';
 
-//
+
+import { AddCustomerComponent } from './components/customer/add-customer/add-customer.component';
+import { EditCustomerComponent } from './components/customer/edit-customer/edit-customer.component';
+import { ListCustomerComponent } from './components/customer/list-customer/list-customer.component';
+
+// Importar rutas
+import { ROUTES } from './app.routes';
+import { RouterModule } from '@angular/router';
+
+// Importar ReactiveFormsModule para los formularios
+import { ReactiveFormsModule } from '@angular/forms';
+import { UsuarioComponent } from './components/usuario/usuario.component';
+import { AddUsuarioComponent } from './components/usuario/add-usuario/add-usuario.component';
+import { ListUsuarioComponent } from './components/usuario/list-usuario/list-usuario.component';
+import { EditUsuarioComponent } from './components/usuario/edit-usuario/edit-usuario.component';
+import { ListEmpresaComponent } from './components/empresa/list-empresa/list-empresa.component';
+import { EditEmpresaComponent } from './components/empresa/edit-empresa/edit-empresa.component';
+import { AddEmpresaComponent } from './components/empresa/add-empresa/add-empresa.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,22 +62,31 @@ import { SaldosComponent } from './components/saldos/saldos.component';
     HomeComponent,
     EmpleadosComponent,
     LibroComponent,
-<<<<<<< HEAD
     CarteraComponent,
     CobranzaComponent,
     SaldosComponent, 
-=======
-    ImportacionXlxComponent
->>>>>>> 66030e257fe8db3d77defca4429b6d7d367396ec
+    ImportacionXlxComponent,
+    AddCustomerComponent,
+    EditCustomerComponent,
+    ListCustomerComponent,
+    UsuarioComponent,
+    AddUsuarioComponent,
+    ListUsuarioComponent,
+    EditUsuarioComponent,
+    ListEmpresaComponent,
+    EditEmpresaComponent,
+    AddEmpresaComponent
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
     APP_ROUTING,
     BrowserAnimationsModule,
-    // AppRoutingModule
+    RouterModule.forRoot( ROUTES, { useHash: true } ),
+    ReactiveFormsModule
   ],
-  providers: [] ,
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+  //  AppRoutingModule,

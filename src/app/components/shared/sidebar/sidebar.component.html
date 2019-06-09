@@ -1,42 +1,42 @@
 <div class="container-fluid">
     <div class="row">
         <aside class="col-12 col-md-2 p-0 fixed-top">
+            <!--
+            <div class="w-100">
+                <button id="btn-nav-toggle" class="btn btn-light m-1">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>  
+            -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="fa fa-bars"></span>
             </button>
 
             <nav class="navbar navbar-expand-md flex-md-column flex-row align-items-start py-2 p-0">
+
                 <div class="collapse navbar-collapse w-100" id="navbarSupportedContent">
                     <ul class="flex-md-column flex-row navbar-nav w-100 justify-content-between">
                         <li class="nav-item active">
-                            <a class="nav-link pl-0" href="#"><i class="fa fa-heart-o fa-fw"></i> <span class="d-none d-md-inline">Nombre Usuario</span></a>
+                            <a class="nav-link pl-0 text-center disabled" href="#"> <span class="d-none d-md-inline">Nombre de usuario</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link pl-0 dropdown-toggle" aria-expanded="false" data-toggle="collapse" href="#submenu"><i class="fa fa-bullseye fa-fw"></i> <span class="d-none d-md-inline">Recursos</span></a>
+                            <a class="nav-link pl-0 dropdown-toggle text-center" aria-expanded="false" data-toggle="collapse" href="#submenu"><span class="d-none d-md-inline text-center">Importacion</span></a>
                             <ul class="list-unstyled collapse" id="submenu">
-                                <li><a class="nav-link" [routerLink]="['/cartera']">Cartera</a></li>
-                                <li><a class="nav-link" [routerLink]="['/cobranza']">Cobranza</a></li>
-                                <li><a class="nav-link" [routerLink]="['/saldos']">Saldos</a></li>
+                                <li class="nav-item"><a class="nav-link" [routerLink]="['/cartera']" routerLinkActive="router-link-active">Importacion cartera</a></li>
+                                <li><a class="nav-link" [routerLink]="['/cobranza']" routerLinkActive="router-link-active">Importacion cobranza</a></li>
+                                <li><a class="nav-link" [routerLink]="['/saldos']" routerLinkActive="router-link-active">Importacion libro</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link pl-0 dropdown-toggle" aria-expanded="false" data-toggle="collapse" href="#submenu2"><i class="fa fa-book fa-fw"></i> <span class="d-none d-md-inline">Reportes</span></a>
-                            <ul class="list-unstyled collapse" id="submenu2">
-                                <li><a class="nav-link" href="#">Cobranzas</a></li>
-                                <li><a class="nav-link" href="#">Sueldos</a></li>
-                                <li><a class="nav-link" href="#">Deudas</a></li>
+                            <a class="nav-link pl-0 dropdown-toggle text-center" aria-expanded="false" data-toggle="collapse" href="#submenu"><span class="d-none d-md-inline text-center">Mantenimiento</span></a>
+                            <ul class="list-unstyled collapse" id="submenu">
+                                <li class="nav-item"><a class="nav-link" [routerLink]="['/list-usuario']" routerLinkActive="router-link-active">Mantenimiento de usuario</a></li>
+                                <li><a class="nav-link" [routerLink]="['/list-empresa']" routerLinkActive="router-link-active">Mantenimiento de empresas</a></li>
+                                <li><a class="nav-link" href="#">Mantenimiento de empleados</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link pl-0" href="#"><i class="fa fa-heart codeply fa-fw"></i> <span class="d-none d-md-inline">Mantenimiento</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link pl-0" href="#"><i class="fa fa-star codeply fa-fw"></i> <span class="d-none d-md-inline">Usarios</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link pl-0" href="#"> <i class="fa fa-times"></i> <span class="d-none d-md-inline">Salir</span></a>
-                        </li>
-                        
+
+
                     </ul>
                 </div>
                 <!--
@@ -91,8 +91,6 @@
                 -->
             </nav>
         </aside>
-        <main class="col bg-faded">
-                <router-outlet></router-outlet>
-        </main>
+
     </div>
 </div>

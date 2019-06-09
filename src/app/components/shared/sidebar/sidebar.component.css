@@ -1,104 +1,100 @@
-aside{
-	background-color: rgb(19, 86, 112);
-  	min-height: 100vh;
-  	-webkit-box-shadow: 9px -3px 14px -9px rgba(0,0,0,0.75);
-	-moz-box-shadow: 9px -3px 14px -9px rgba(0,0,0,0.75);
-	box-shadow: 9px -3px 14px -9px rgba(0,0,0,0.75);
-  }
-
-main{
-	margin-left: 17%;
-	min-height: 100vh;
+aside {
+    background-color: #0097A7;
+    min-height: 100vh;
+    -webkit-box-shadow: 9px -3px 14px -9px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 9px -3px 14px -9px rgba(0, 0, 0, 0.75);
+    box-shadow: 9px -3px 14px -9px rgba(0, 0, 0, 0.75);
+    margin-top: 60px;
 }
 
-li ul li a{
-	padding-left: 2.2em;
+main {
+    margin-left: 17%;
+    min-height: 100vh;
 }
 
-a{
-	transition-property: background-color, color;
-	transition-duration: 0.3s;
-	transition-timing-function: ease;
-	color: white !important
+li ul li a {
+    padding-left: 2.2em;
 }
 
-.dropdown-toggle::after{
-	float: right;
-	margin-top: 0.7em;
+a {
+    transition-property: background-color, color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    color: white !important
 }
 
-nav{
-	background-color:rgb(19, 86, 112);
-	border-bottom: solid;
-	border-color: rgb(19, 86, 112);
+.dropdown-toggle::after {
+    float: right;
+    margin-top: 0.7em;
 }
 
-a:hover{
-	background-color: white;
-	color: black !important;
+nav {
+    background-color: #0097A7;
+    border-bottom: solid;
+    border-color: #0097A7;
 }
 
-.active{
-	background-color: rgb(19, 86, 112) !important;
+a:hover {
+    background-color: white;
+    color: black !important;
 }
 
-a>*{
-	font-size: 1.04em;
+.active {
+    background-color: #0097A7 !important;
 }
 
-a>span{
-	padding-left: 0.5em;
+a>* {
+    font-size: 1.04em;
 }
 
-a>.fa{
-	margin-left: 0.5em;
+a>span {
+    padding-left: 0.5em;
 }
 
-#btn-nav-toggle>i{
-	color: rgb(19, 86, 112);
-	font-size: 1.2em;
+a>.fa {
+    margin-left: 0.5em;
 }
 
-.navbar-toggler{
-	display: none;
+#btn-nav-toggle>i {
+    color: #F79211;
+    font-size: 1.2em;
 }
 
-.navbar-toggler span{
-	color: white;
-	font-size: 1.4em;
+.navbar-toggler {
+    display: none;
+}
+
+.navbar-toggler span {
+    color: white;
+    font-size: 1.4em;
 }
 
 @media only screen and (max-width: 767px) {
-  aside{
-  	min-height: 5vh;
-  }
-  main{
-  	margin-top: 20%;
-  	margin-left: 0;
-  }
-
-
-  @media only screen and (max-height: 414px) {
-
-	main{
-	  	margin-top: 12%;
-	  	margin-left: 0;
-	}
-
-	}
-  
-  
-  a:hover{
-  	background-color: transparent;
-  }
-  a:active,a:hover{
-  	color: white !important;
-  }
-  .navbar-toggler{
-	display: inline-block;
-	}
-
+    aside {
+        min-height: 5vh;
+    }
+    main {
+        margin-top: 20%;
+        margin-left: 0;
+    }
+    @media only screen and (max-height: 414px) {
+        main {
+            margin-top: 12%;
+            margin-left: 0;
+        }
+    }
+    a:hover {
+        background-color: transparent;
+    }
+    a:active,
+    a:hover {
+        color: white !important;
+    }
+    .navbar-toggler {
+        display: inline-block;
+    }
 }
 
-
-
+aside {
+    display: block;
+}

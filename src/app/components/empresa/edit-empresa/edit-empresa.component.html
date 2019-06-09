@@ -1,0 +1,38 @@
+<app-sidebar></app-sidebar>
+<div class="position container">
+    <div class="col">
+        <h2 class="text-center">Editar Empresa</h2>
+        <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+
+            <div class="form-group">
+                <label for="ruc">ruc:</label>
+                <input formControlName="ruc" placeholder="ruc" name="ruc" class="form-control" id="ruc" required>
+            </div>
+
+            <div class="form-group">
+                <label for="nombre">nombre:</label>
+                <input formControlName="nombre" placeholder="nombre" name="nombre" class="form-control" id="nombre" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dir_legal">Direccion legal:</label>
+                <input type="dir_legal" formControlName="dir_legal" placeholder="dir_legal" name="dir_legal" class="form-control" id="dir_legal" required>
+            </div>
+            <div class="form-group">
+                <label for="dis_legal">dis legal:</label>
+                <input type="dis_legal" formControlName="dis_legal" placeholder="dis_legal" name="dis_legal" class="form-control" id="dis_legal" required>
+            </div>
+            <div class="form-group">
+                <label for="dir_entrega">Direccion de entrega:</label>
+                <input type="dir_entrega" formControlName="dir_entrega" placeholder="dir_entrega" name="dir_entrega" class="form-control" id="dir_entrega" required>
+            </div>
+            <div class="form-group">
+                <label for="dis_entrega">disen legal:</label>
+                <input type="dis_entrega" formControlName="dis_entrega" placeholder="dis_entrega" name="dis_entrega" class="form-control" id="dis_entrega" required>
+            </div>
+
+            <button class="btn btn-success">Aceptar</button>
+            <button class="btn btn-primary" routerLink="/list-empresa">Regresar</button>
+        </form>
+    </div>
+</div>

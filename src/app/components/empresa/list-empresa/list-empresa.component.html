@@ -1,0 +1,36 @@
+<app-sidebar></app-sidebar>
+<div class="position container">
+    <div class="col">
+        <h2 class="text-center">Empresa</h2>
+        <hr>
+        <button class="btn btn-primary" (click)="addEmpresa()">Agregar Empresa</button>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th class="hidden">Id</th>
+                    <th>Ruc</th>
+                    <th>Nombre</th>
+                    <th>Direccion Legal</th>
+                    <th>operacion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let empresa of empresas">
+                    <td class="hidden">{{ empresa.id }}</td>
+                    <td>{{ empresa.ruc }}</td>
+                    <td>{{ empresa.nombre }}</td>
+                    <td>{{ empresa.dir_legal }}</td>
+
+                    <td>
+                        <button class="btn btn-success" (click)="editEmpresa(empresa)">
+          Editar
+        </button>
+                        <button class="btn btn-danger" (click)="deleteEmpresa(empresa)">
+          Borrar
+        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

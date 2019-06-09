@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { UsuarioService } from 'src/app/services/usuario.service';
+import { Usuario } from 'src/app/model/usuario';
 
 declare var $:any;
 
@@ -9,14 +13,43 @@ declare var $:any;
 })
 export class ModalLoginComponent implements OnInit {
 
-  constructor() { }
+  error=false;
+  usuario:Usuario;
+  usuarios: Usuario[];
+  loginForm: FormGroup;
+
+  constructor(private formBuilder: FormBuilder,private router: Router, private service: UsuarioService) { }
 
   ngOnInit() {
-  	$("#form-login").submit(function(){
-  		
-  		
+    this.service.getCustomers().subscribe(data => (this.usuarios = data));
 
-  	});
+    this.loginForm = this.formBuilder.group({
+      usuario : ['', Validators.required],
+      contra: ['', Validators.required]
+    });
   }
+
+  
+
+  logearse(){
+    
+    console.log(this.loginForm.value.usuario);
+    console.log(this.loginForm.value.contra);
+    
+    for (let usuario of this.usuarios) {
+      if(usuario.usuario== this.loginForm.value.usuario && usuario.contrase==this.loginForm.value.contra){
+        console.log("Ingresaste");
+        this.error=false;
+        this.router.navigate(['/cartera']);
+        break;
+      }else{
+        this.error=true;
+      }
+    }
+   
+    return ;
+  };
+
+  
 
 }

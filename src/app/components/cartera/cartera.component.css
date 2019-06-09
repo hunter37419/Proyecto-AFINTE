@@ -5,15 +5,23 @@
     width: 1050px;
     height: 400px;
 }*/
-#divsubircartera{
+
+.position {
+    margin-left: 260px;
+    margin-top: -180px;
+}
+
+#divsubircartera {
     float: left;
     width: 500px;
     height: 200px;
 }
-#btnsubirexcel{
+
+#btnsubirexcel {
     text-align: center;
 }
-#divimg{
+
+#divimg {
     float: left;
     width: 500px;
     height: 200px;
@@ -21,7 +29,8 @@
     margin-top: 5px;
     margin-left: 50px;
 }
-#divimg img{
+
+#divimg img {
     border-radius: 10px;
     box-shadow: 0px 0px 15px blue;
 }
