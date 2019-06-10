@@ -41,6 +41,7 @@ export class ModalLoginComponent implements OnInit {
         console.log("Ingresaste");
         this.error=false;
         this.router.navigate(['/cartera']);
+        $('app-home').remove();
         break;
       }else{
         this.error=true;
