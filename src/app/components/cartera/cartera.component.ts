@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild} from '@angular/core';
 import { Cartera} from '../../modals/Cartera';
 import * as XLSX from 'xlsx';
+import { CarteraService } from 'src/app/services/cartera.service';
+import { Router } from '@angular/router';
 
 declare var $:any;
 
@@ -19,7 +21,7 @@ export class CarteraComponent implements OnInit {
 	file:File;
   private listacarteras = new Array();
 
-  constructor() {
+  constructor( public router: Router, public service: CarteraService) {
     this.dtoptions = {
       pageLength:25,
       scrollY : 400,
@@ -63,6 +65,7 @@ export class CarteraComponent implements OnInit {
   	        fileReader.readAsArrayBuffer(this.file);
   	}
 
+	
   	ValidarPrimeraFila(){
 
   	  //alert($('#exceltable tbody').children('tr').eq(1).children('td').eq(0).text());
@@ -155,12 +158,21 @@ export class CarteraComponent implements OnInit {
   	      cartera.motivo_disputa = elem.children('td').eq(30).text();
   	      cartera.motivo_castigo = elem.children('td').eq(31).text();
   	      */
+		   
+		  
   	      lista.push(cartera);
-
+        
   	      //console.log(lista);
   	      //console.log(lista);
   	  });
   	    return lista;
   	}
-
+	  onSubmit() {
+		for (let cartera of this.listacarteras){
+		this.service.createCustomer(cartera )
+		  .subscribe(data => {
+			
+		  });
+		}
+	  }
 }
