@@ -40,7 +40,7 @@ a:hover {
 }
 
 .active {
-    background-color: #0097A7 !important;
+    background-color: rgb(39, 89, 95) !important;
 }
 
 a>* {
