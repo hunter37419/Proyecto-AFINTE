@@ -26,7 +26,7 @@ public class CobCierre {
 			private Date fecha_cobro;
 			
 			@Column(name="numero_cliente ")
-			private int numero_cliente ;
+			private Integer numero_cliente ;
 			
 			@Column(name="nombre_pagador")
 			private String nombre_pagador ;
@@ -35,7 +35,7 @@ public class CobCierre {
 			private String codigo_moneda;
 			
 			@Column(name="importe_cobro")
-			private Double importe_cobro;
+			private BigDecimal importe_cobro;
 			
 			@Column(name="div_basica")
 			private String Div_basica;
@@ -50,7 +50,7 @@ public class CobCierre {
 			private BigDecimal batch;
 			
 			@Column(name="fecha_batch")
-			private Double fechabatch;
+			private Date fechabatch;
 			
 			
 			
@@ -110,11 +110,11 @@ public class CobCierre {
 				this.codigo_moneda = codigo_moneda;
 			}
 
-			public Double getImporte_cobro() {
+			public BigDecimal getImporte_cobro() {
 				return importe_cobro;
 			}
 
-			public void setImporte_cobro(Double importe_cobro) {
+			public void setImporte_cobro(BigDecimal importe_cobro) {
 				this.importe_cobro = importe_cobro;
 			}
 
@@ -152,12 +152,18 @@ public class CobCierre {
 				this.batch = batch;
 			}
 
-			public Double getFechabatch() {
+		
+
+			public Date getFechabatch() {
 				return fechabatch;
 			}
 
-			public void setFechabatch(Double fechabatch) {
+			public void setFechabatch(Date fechabatch) {
 				this.fechabatch = fechabatch;
+			}
+
+			public void setNumero_cliente(Integer numero_cliente) {
+				this.numero_cliente = numero_cliente;
 			}
 
 			@Override

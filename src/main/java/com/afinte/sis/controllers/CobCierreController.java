@@ -72,9 +72,9 @@ public class CobCierreController {
 	//add mapping for DELETE /cobcierres/{cobcierreId} - delete existing cobcierre
 	@DeleteMapping("/cobcierres/{cobcierreId}")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
-	public void deleteCobcierre(@PathVariable int cobcierre) {
+	public void deleteCobcierre(@PathVariable int cobcierreId) {
 		
-		cobcierreService.deleteCobCierre(cobcierre);
+		cobcierreService.deleteCobCierre(cobcierreId);
 	}
 
 	
