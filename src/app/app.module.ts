@@ -49,6 +49,8 @@ import { EditEmpresaComponent } from './components/empresa/edit-empresa/edit-emp
 import { AddEmpresaComponent } from './components/empresa/add-empresa/add-empresa.component';
 import { ListaCarteraComponent } from './components/cartera/lista-cartera/lista-cartera.component';
 import { ListaCobranzaCierreComponent } from './components/saldos/lista-cobranza-cierre/lista-cobranza-cierre.component';
+import { AsignarCustomerComponent } from './components/customer/asignar-customer/asignar-customer.component';
+import { AsignarCustomer2Component } from './components/customer/asignar-customer2/asignar-customer2.component';
 
 @NgModule({
   declarations: [
@@ -79,7 +81,9 @@ import { ListaCobranzaCierreComponent } from './components/saldos/lista-cobranza
     EditEmpresaComponent,
     AddEmpresaComponent,
     ListaCarteraComponent,
-    ListaCobranzaCierreComponent
+    ListaCobranzaCierreComponent,
+    AsignarCustomerComponent,
+    AsignarCustomer2Component
   ],
   imports: [
     HttpClientModule,
