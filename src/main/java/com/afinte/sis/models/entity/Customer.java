@@ -24,6 +24,8 @@ public class Customer {
 	
 	@Column(name="email")
 	private String email;
+	@Column(name="empresa")
+	private String empresa;
 	
 	public Customer() {
 		
@@ -61,9 +63,20 @@ public class Customer {
 		this.email = email;
 	}
 
+	public String getEmpresa() {
+		return empresa;
+	}
+
+	public void setEmpresa(String empresa) {
+		this.empresa = empresa;
+	}
+
 	@Override
 	public String toString() {
-		return "Customer [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
+		return "Customer [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
+				+ ", empresa=" + empresa + "]";
 	}
+
+	
 
 }
