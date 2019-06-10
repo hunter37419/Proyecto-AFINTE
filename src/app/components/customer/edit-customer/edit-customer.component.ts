@@ -8,6 +8,7 @@ import { Customer } from 'src/app/model/customer';
 @Component({
   selector: 'app-edit-customer',
   templateUrl: './edit-customer.component.html',
+  styleUrls: ['./edit-customer.component.css'],
   styles: []
 })
 export class EditCustomerComponent implements OnInit {

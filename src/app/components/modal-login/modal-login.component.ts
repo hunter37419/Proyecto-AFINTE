@@ -17,6 +17,7 @@ export class ModalLoginComponent implements OnInit {
   usuario:Usuario;
   usuarios: Usuario[];
   loginForm: FormGroup;
+  mostrar:Boolean=true;
 
   constructor(private formBuilder: FormBuilder,private router: Router, private service: UsuarioService) { }
 
@@ -40,15 +41,16 @@ export class ModalLoginComponent implements OnInit {
       if(usuario.usuario== this.loginForm.value.usuario && usuario.contrase==this.loginForm.value.contra){
         console.log("Ingresaste");
         this.error=false;
+        this. mostrar=false;
         this.router.navigate(['/gerente',usuario.id]);
-        $('app-home').remove();
+       //
         break;
       }else{
         this.error=true;
       }
     }
    
-    return ;
+    
   };
 
   

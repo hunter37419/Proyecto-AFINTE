@@ -18,6 +18,8 @@ import { ListUsuarioComponent } from './components/usuario/list-usuario/list-usu
 import { AddEmpresaComponent } from './components/empresa/add-empresa/add-empresa.component';
 import { EditEmpresaComponent } from './components/empresa/edit-empresa/edit-empresa.component';
 import { ListEmpresaComponent } from './components/empresa/list-empresa/list-empresa.component';
+import { ListaCarteraComponent } from './components/cartera/lista-cartera/lista-cartera.component';
+import { ListaCobranzaCierreComponent } from './components/saldos/lista-cobranza-cierre/lista-cobranza-cierre.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent,data: {animation: 'HomeView'}},
@@ -36,7 +38,9 @@ const routes: Routes = [
   { path: 'list-usuario', component: ListUsuarioComponent },
   { path: 'add-empresa', component: AddEmpresaComponent },
   { path: 'edit-empresa', component: EditEmpresaComponent },
+  { path: 'lista-cartera', component: ListaCarteraComponent },
   { path: 'list-empresa', component: ListEmpresaComponent },
+  { path: 'lista-cobranza-cierre', component: ListaCobranzaCierreComponent },
   {path: '**', pathMatch: 'full' , redirectTo: 'home'}
 ];
 

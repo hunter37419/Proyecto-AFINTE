@@ -1,0 +1,36 @@
+<app-sidebar></app-sidebar>
+<div class="position container">
+    <div class="col">
+        <h2 class="text-center">Reporte Cartera</h2>
+        <hr>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th class="hidden">Id</th>
+                    <th>Ruc</th>
+                    <th>Aging</th>
+                    <th>Castigo</th>
+                    <th>Clase</th>
+                    <th>Cobrador</th>
+                    <th>Cobranza</th>
+                    <th>operacion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let carteras of cartera">
+                    <td class="hidden">{{ carteras.llave }}</td>
+                    <td>{{ carteras.ruc }}</td>
+                    <td>{{ carteras.aging }}</td>
+                    <td>{{ carteras.castigo }}</td>
+                    <td>{{ carteras.clase }}</td>
+                    <td>{{ carteras.cobrador }}</td>
+                    <td>{{ carteras.cobranza }}</td>
+
+                    <td>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

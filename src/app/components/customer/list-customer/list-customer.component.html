@@ -1,32 +1,35 @@
-<div class="col">
-    <h2 class="text-center">Clientes</h2>
-    <hr>
-    <button class="btn btn-primary" (click)="addCustomer()">Agregar Cliente</button>
-    <table class="table table-striped">
-        <thead class="thead-dark">
-            <tr>
-                <th class="hidden">Id</th>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Email</th>
-                <th>Acción</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let customer of customers">
-                <td class="hidden">{{ customer.id }}</td>
-                <td>{{ customer.firstName }}</td>
-                <td>{{ customer.lastName }}</td>
-                <td>{{ customer.email }}</td>
-                <td>
-                    <button class="btn btn-success" (click)="editCustomer(customer)">
+<app-sidebar></app-sidebar>
+<div class="position container">
+    <div class="col">
+        <h2 class="text-center">Empleados</h2>
+        <hr>
+        <button class="btn btn-primary" (click)="addCustomer()">Agregar Empleados</button>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th class="hidden">Id</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let customer of customers">
+                    <td class="hidden">{{ customer.id }}</td>
+                    <td>{{ customer.firstName }}</td>
+                    <td>{{ customer.lastName }}</td>
+                    <td>{{ customer.email }}</td>
+                    <td>
+                        <button class="btn btn-success" (click)="editCustomer(customer)">
             Editar
           </button>
-                    <button class="btn btn-danger" (click)="deleteCustomer(customer)">
+                        <button class="btn btn-danger" (click)="deleteCustomer(customer)">
             Borrar
           </button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

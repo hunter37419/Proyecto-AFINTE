@@ -6,6 +6,10 @@
     height: 400px;
 }*/
 
+td {
+    color: white;
+}
+
 .position {
     margin-left: 260px;
     margin-top: -180px;

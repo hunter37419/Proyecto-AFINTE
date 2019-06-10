@@ -24,7 +24,7 @@
                             <ul class="list-unstyled collapse" id="submenuimportacion">
                                 <li class="nav-item"><a class="nav-link" [routerLink]="['/cartera']" routerLinkActive="router-link-active">Importacion cartera</a></li>
                                 <li><a class="nav-link" [routerLink]="['/cobranza']" routerLinkActive="router-link-active">Importacion cobranza</a></li>
-                                <li><a class="nav-link" [routerLink]="['/saldos']" routerLinkActive="router-link-active">Importacion libro</a></li>
+                                <li><a class="nav-link" [routerLink]="['/saldos']" routerLinkActive="router-link-active">Importacion cobranzas cierre</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -32,7 +32,14 @@
                             <ul class="list-unstyled collapse" id="submenumantenimiento">
                                 <li class="nav-item"><a class="nav-link" [routerLink]="['/list-usuario']" routerLinkActive="router-link-active">Mantenimiento de usuario</a></li>
                                 <li><a class="nav-link" [routerLink]="['/list-empresa']" routerLinkActive="router-link-active">Mantenimiento de empresas</a></li>
-                                <li><a class="nav-link" href="#">Mantenimiento de empleados</a></li>
+                                <li><a class="nav-link" [routerLink]="['/list-customer']" routerLinkActive="router-link-active">Mantenimiento de empleados</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pl-0 dropdown-toggle text-center" aria-expanded="false" data-toggle="collapse" href="#submenureportes"><span class="d-none d-md-inline text-center">Reportes</span></a>
+                            <ul class="list-unstyled collapse" id="submenureportes">
+                                <li class="nav-item"><a class="nav-link" [routerLink]="['/lista-cartera']" routerLinkActive="router-link-active">Reporte de Cartera</a></li>
+                                <li class="nav-item"><a class="nav-link" [routerLink]="['/lista-cobranza-cierre']" routerLinkActive="router-link-active">Reporte de Cobranza Cierre</a></li>
                             </ul>
                         </li>
 

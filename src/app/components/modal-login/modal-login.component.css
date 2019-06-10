@@ -1,52 +1,51 @@
 @import url('https://fonts.googleapis.com/css?family=Amaranth&display=swap');
-
-.modal-content{
-	width: 24em;
-	margin-left: auto;
-	margin-right: auto;
+.modal-content {
+    width: 24em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.modal-title{
-	font-family: 'Lobster', cursive;
-	font-size: 3.3em;
+.modal-title {
+    font-family: 'Lobster', cursive;
+    font-size: 3.3em;
 }
 
-.form-control{
-	border-radius: 12px;
-	//font-family: 'Pathway Gothic One', sans-serif;
-	font-size: 1em;
+.form-control {
+    border-radius: 12px;
+    //font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 1em;
 }
 
-.form-control::placeholder{
-	color: #B9B9B9;
+.form-control::placeholder {
+    color: #B9B9B9;
 }
 
-.modal-body{
-	background-color: #EEEEEE;
+.modal-body {
+    background-color: #EEEEEE;
 }
 
-.btn-login{
-	background-color: #526AB4;
-	//font-family: 'Pathway Gothic One', sans-serif;
-	font-size: 1.1em;
-	border-radius: 12px;
-	color: white;
+.btn-login {
+    background-color: #526AB4;
+    //font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 1.1em;
+    border-radius: 12px;
+    color: white;
 }
 
-.btn-login:hover{
-	background-color: #1E4ACF;
+.btn-login:hover {
+    background-color: #1E4ACF;
 }
 
-.btn-login:active{
-	background-color: #353535;
+.btn-login:active {
+    //background-color: #353535;
 }
 
-.login_icon{
-	font-size: 9em;
-	color: #6279BE;
+.login_icon {
+    font-size: 9em;
+    color: #6279BE;
 }
 
-.logo{
-	font-family: 'Amaranth', sans-serif;
+.logo {
+    font-family: 'Amaranth', sans-serif;
     color: black !important;
 }

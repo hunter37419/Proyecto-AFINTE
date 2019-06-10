@@ -47,6 +47,8 @@ import { EditUsuarioComponent } from './components/usuario/edit-usuario/edit-usu
 import { ListEmpresaComponent } from './components/empresa/list-empresa/list-empresa.component';
 import { EditEmpresaComponent } from './components/empresa/edit-empresa/edit-empresa.component';
 import { AddEmpresaComponent } from './components/empresa/add-empresa/add-empresa.component';
+import { ListaCarteraComponent } from './components/cartera/lista-cartera/lista-cartera.component';
+import { ListaCobranzaCierreComponent } from './components/saldos/lista-cobranza-cierre/lista-cobranza-cierre.component';
 
 @NgModule({
   declarations: [
@@ -75,7 +77,9 @@ import { AddEmpresaComponent } from './components/empresa/add-empresa/add-empres
     EditUsuarioComponent,
     ListEmpresaComponent,
     EditEmpresaComponent,
-    AddEmpresaComponent
+    AddEmpresaComponent,
+    ListaCarteraComponent,
+    ListaCobranzaCierreComponent
   ],
   imports: [
     HttpClientModule,
