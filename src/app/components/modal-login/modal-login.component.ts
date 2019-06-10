@@ -40,7 +40,7 @@ export class ModalLoginComponent implements OnInit {
       if(usuario.usuario== this.loginForm.value.usuario && usuario.contrase==this.loginForm.value.contra){
         console.log("Ingresaste");
         this.error=false;
-        this.router.navigate(['/cartera']);
+        this.router.navigate(['/gerente',usuario.id]);
         $('app-home').remove();
         break;
       }else{

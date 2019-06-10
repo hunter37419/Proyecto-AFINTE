@@ -21,7 +21,8 @@ import { ListEmpresaComponent } from './components/empresa/list-empresa/list-emp
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent,data: {animation: 'HomeView'}},
-  {path: 'gerente', component: GerenteComponent},
+  // {path: 'gerente', component: GerenteComponent},
+  {path: 'gerente/:id', component: GerenteComponent},
   {path: 'nosotros', component: NosotrosComponent,data: {animation: 'NosotrosView'}},
   {path: 'cartera', component: CarteraComponent},
   {path: 'cobranza', component: CobranzaComponent},

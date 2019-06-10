@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Usuario } from '../../../model/usuario';
+import { ActivatedRoute, Router } from '@angular/router';
+import { UsuarioService } from 'src/app/services/usuario.service';
 
 
 @Component({
@@ -8,24 +11,21 @@ import { Component, OnInit } from '@angular/core';
 
 })
 export class GerenteComponent implements OnInit {
-
- 
-  status = true;
-  datosPersonales = true;
-  gerente=false;
-  mantenimiento = false;
-  empleados = false;
-  importacion = false;
-  empresas =  false;
-  reportes = false;
-
+id:string;
+  usuario:Usuario;
   man_empleados=false;
 
-  constructor() {
+  constructor(private _route:ActivatedRoute,private router: Router, private service: UsuarioService) {
+    this.id=this._route.snapshot.paramMap.get('id');
     
-    //console.log(this.mantenimiento);
    }
   ngOnInit() {
+   
+    this.service.getCustomer(Number(this.id))
+    .subscribe(data => {
+      this.usuario=data;
+    });
+
   }
 
 
