@@ -10,7 +10,7 @@ import { CobranzaCierreService } from '../../../services/cobranza-cierre';
 })
 export class ListaCobranzaCierreComponent implements OnInit {
   cobranzaCierre: CobranzaCierre[];
-
+  pageActual: number=1;
   constructor(private router: Router, private service: CobranzaCierreService) {}
 
   ngOnInit() {

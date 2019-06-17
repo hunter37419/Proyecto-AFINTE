@@ -1,35 +1,38 @@
 <app-sidebar></app-sidebar>
-<div class="position container">
-    <div class="col">
-        <h2 class="text-center">Reporte de Cobranza Cierre</h2>
-        <hr>
-        <table class="table table-striped">
-            <thead class="thead-dark">
-                <tr>
-                    <th class="hidden">Id</th>
-                    <th>numero recibo</th>
-                    <th>numero cliente</th>
-                    <th>nombre pagador</th>
-                    <th>codigo moneda</th>
-                    <th>importe cobro</th>
-                    <th>operacion</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let cobranzaCierre of cobranzaCierre">
-                    <td class="hidden">{{ cobranzaCierre.id }}</td>
-                    <td>{{ cobranzaCierre.numero_recibo }}</td>
-                    <td>{{ cobranzaCierre.numero_cliente }}</td>
-                    <td>{{ cobranzaCierre.nombre_pagador }}</td>
-                    <td>{{ cobranzaCierre.codigo_moneda }}</td>
-                    <td>{{ cobranzaCierre.importe_cobro }}</td>
+<div class="contenido">
+    <div class="position container">
+        <div class="col">
+            <h2 class="text-center">Reporte de Cobranza Cierre</h2>
+            <hr>
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th class="hidden">Id</th>
+                        <th>numero recibo</th>
+                        <th>numero cliente</th>
+                        <th>nombre pagador</th>
+                        <th>codigo moneda</th>
+                        <th>importe cobro</th>
+                        <th>operacion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let cobranzaCierre of cobranzaCierre | paginate: { itemsPerPage: 10, currentPage: pageActual }">
+                        <td class="hidden">{{ cobranzaCierre.id }}</td>
+                        <td>{{ cobranzaCierre.numero_recibo }}</td>
+                        <td>{{ cobranzaCierre.numero_cliente }}</td>
+                        <td>{{ cobranzaCierre.nombre_pagador }}</td>
+                        <td>{{ cobranzaCierre.codigo_moneda }}</td>
+                        <td>{{ cobranzaCierre.importe_cobro }}</td>
 
 
-                    <td>
+                        <td>
 
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <pagination-controls (pageChange)="pageActual = $event"></pagination-controls>
+        </div>
     </div>
 </div>

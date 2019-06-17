@@ -1,46 +1,63 @@
-.card{
-	opacity: 0.8;
-	width: 16.5em;
+.card {
+    opacity: 0.8;
+    width: 16.5em;
 }
 
-.fa{
-	font-size: 4em;
+.fa {
+    font-size: 4em;
 }
 
-.card-header{
-	padding: 2em 0;
+.card-header {
+    padding: 2em 0;
 }
 
-@media only screen and (max-width: 992px){
-
-    .card{
-    	width: 17em;
-    	height: 10em;
-    	margin-bottom: 0.5em;
+@media only screen and (max-width: 992px) {
+    .card {
+        width: 17em;
+        height: 10em;
+        margin-bottom: 0.5em;
     }
-    .fa{
-    	font-size: 2.8em;
-    	padding: 0 0;
+    .fa {
+        font-size: 2.8em;
+        padding: 0 0;
     }
-    .card-header{
-    	padding: 1em 0;
+    .card-header {
+        padding: 1em 0;
     }
-
-    .card-tittle{
+    .card-tittle {
         margin-bottom: 0;
     }
-
-    @media only screen and (max-height: 568px){
-
-        .card{
+    @media only screen and (max-height: 568px) {
+        .card {
             width: 14em;
             height: 10em;
         }
-        .fa{
+        .fa {
             font-size: 2.3em;
             padding: 0 0;
         }
-        
     }
+}
 
+body {
+    background: url('/assets/img/bg-cobranzas.jpg') no-repeat;
+    //background: url('/assets/img/cobranza banner.jpeg') no-repeat;
+    //background: url('/assets/img/cobro.jpg') no-repeat;
+    min-height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+img {
+    margin-bottom: 1.2em;
+    -webkit-box-shadow: 6px 6px 20px -2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 6px 6px 20px -2px rgba(0, 0, 0, 0.75);
+    box-shadow: 6px 6px 20px -2px rgba(0, 0, 0, 0.75);
+}
+
+.contenido {
+    position: absolute;
+    margin-top: 250px;
+    margin-left: 180px;
 }

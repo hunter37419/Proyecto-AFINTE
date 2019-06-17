@@ -13,6 +13,7 @@ import { HeaderComponent } from './components/shared/header/header.component';
 import { NavComponent } from './components/shared/nav/nav.component';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { ModalLoginComponent } from './components/modal-login/modal-login.component';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 import { ContactComponent } from './components/contact/contact.component';
 import { SidebarComponent } from './components/shared/sidebar/sidebar.component';
@@ -91,7 +92,8 @@ import { AsignarCustomer2Component } from './components/customer/asignar-custome
     APP_ROUTING,
     BrowserAnimationsModule,
     RouterModule.forRoot( ROUTES, { useHash: true } ),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

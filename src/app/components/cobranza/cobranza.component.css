@@ -6,13 +6,26 @@
     height: 400px;
 }*/
 
+.contenido {
+    background: url('/assets/img/bg-cobranzas.jpg') no-repeat;
+    //background: url('/assets/img/cobranza banner.jpeg') no-repeat;
+    //background: url('/assets/img/cobro.jpg') no-repeat;
+    min-height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-left: 50px;
+}
+
 td {
     color: white;
 }
 
 .position {
-    margin-left: 260px;
-    margin-top: -180px;
+    margin-left: 250px;
+    margin-top: 60px;
 }
 
 #divsubircobranza {
@@ -44,5 +57,5 @@ td {
 }
 
 #exceltable tbody {
-    font-size: 0.8  em;
+    font-size: 0.8 em;
 }

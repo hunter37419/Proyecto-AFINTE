@@ -1,35 +1,37 @@
 <app-sidebar></app-sidebar>
-<div class="position container">
-    <div class="col">
-        <h2 class="text-center">Usuario</h2>
-        <hr>
-        <button class="btn btn-primary" (click)="addCustomer()">Agregar Usuario</button>
-        <table class="table table-striped">
-            <thead class="thead-dark">
-                <tr>
-                    <th>Id</th>
-                    <th>Nombres:</th>
-                    <th>Contraseña:</th>
-                    <th>Cargo</th>
-                    <th>Operaciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let customer of usuarios">
-                    <td class="hidden">{{ customer.id }}</td>
-                    <td>{{ customer.nombres }}</td>
-                    <td>{{ customer.contrase }}</td>
-                    <td>{{ customer.cargo }}</td>
-                    <td>
-                        <button class="btn btn-success" (click)="editCustomer(customer)">
+<div class="contenido">
+    <div class="position container">
+        <div class="col">
+            <h2 class="text-center">Usuario</h2>
+            <hr>
+            <button class="btn btn-primary" (click)="addCustomer()">Agregar Usuario</button>
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombres:</th>
+                        <th>Contraseña:</th>
+                        <th>Cargo</th>
+                        <th>Operaciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let customer of usuarios">
+                        <td class="hidden">{{ customer.id }}</td>
+                        <td>{{ customer.nombres }}</td>
+                        <td>{{ customer.contrase }}</td>
+                        <td>{{ customer.cargo }}</td>
+                        <td>
+                            <button class="btn btn-success" (click)="editCustomer(customer)">
             Editar
           </button>
-                        <button class="btn btn-danger" (click)="deleteCustomer(customer)">
+                            <button class="btn btn-danger" (click)="deleteCustomer(customer)">
             Borrar
           </button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>

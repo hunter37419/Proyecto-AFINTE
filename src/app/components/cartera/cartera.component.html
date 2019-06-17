@@ -1,50 +1,52 @@
 <app-sidebar>
 </app-sidebar>
-<div class="position container">
-    <h1 class="container  text-white text-center my-4 pg-0 font-weight-bold">Cartera</h1>
-    <div id="divsubircartera">
-        <form class="container" [formGroup]="">
-            <table class="table">
-                <tr>
-                    
-                    <td colspan="3">
-                        <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="cargar-doc" accept=".xlsx" (change)="incomingfile($event)" >
-                          <label class="custom-file-label" for="customFile"> ... </label>
-                        </div>
-                    </td>
+<div class="contenido">
+    <div class="position container">
+        <h1 class="container  text-white text-center my-4 pg-0 font-weight-bold">Cartera</h1>
+        <div id="divsubircartera">
+            <form class="container" [formGroup]="">
+                <table class="table">
+                    <tr>
+
+                        <td colspan="3">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="cargar-doc" accept=".xlsx" (change)="incomingfile($event)">
+                                <label class="custom-file-label" for="customFile"> ... </label>
+                            </div>
+                        </td>
 
 
-                </tr>
-                <tr class="d-none">
-                    <td><label for="inputPagina">Pagina Excel:&nbsp;</label></td>
-                    <td><input type="number" class="form-control" id="inputPagina" placeholder="Pagina"></td>
-                </tr>
-                <tr>
-                    <td colspan="1"><button id="btnsubirexcel" type="button" class="btn btn-primary btn-sm" (click)="Upload()">Subir Excel</button></td>
+                    </tr>
+                    <tr class="d-none">
+                        <td><label for="inputPagina">Pagina Excel:&nbsp;</label></td>
+                        <td><input type="number" class="form-control" id="inputPagina" placeholder="Pagina"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1"><button id="btnsubirexcel" type="button" class="btn btn-primary btn-sm" (click)="Upload()">Subir Excel</button></td>
 
-                    <td colspan="1"><button type="button" class="btn btn-primary btn-sm" (click)="onSubmit()">Importar</button>            
-                    </td>
+                        <td colspan="1"><button type="button" class="btn btn-primary btn-sm" (click)="onSubmit()">Importar</button>
+                        </td>
 
-                    <td>
-                        <div id="spinner_cartera" class="spinner-border text-dark" role="status">
-                          <span class="sr-only">Loading...</span>
-                        </div>
-                    </td>
-                </tr>
+                        <td>
+                            <div id="spinner_cartera" class="spinner-border text-dark" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div id="divimg">
+            <img width="450px" height="180px" src="../assets/img/cartera.jpg" alt="">
+        </div>
+        <div class="mx-auto table-responsive">
+            <div class="list-columns"></div>
+            <table id="exceltable" class="table table-sm table-bordered table-hover">
+                <thead class="thead-dark">
+                </thead>
+                <tbody>
+                </tbody>
             </table>
-        </form>
-    </div>
-    <div id="divimg">
-        <img width="450px" height="180px" src="../assets/img/cartera.jpg" alt="">
-    </div>
-    <div class="mx-auto table-responsive">
-        <div class="list-columns"></div>
-        <table id="exceltable" class="table table-sm table-bordered table-hover">
-            <thead class="thead-dark">
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
+        </div>
     </div>
 </div>

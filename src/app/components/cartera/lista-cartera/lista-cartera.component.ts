@@ -11,7 +11,7 @@ import { CarteraService } from 'src/app/services/cartera.service';
 export class ListaCarteraComponent implements OnInit {
 
   cartera: Cartera[];
-
+  pageActual:number = 1;
   constructor(private router: Router, private service: CarteraService) {}
 
   ngOnInit() {
