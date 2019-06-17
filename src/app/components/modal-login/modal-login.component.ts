@@ -43,7 +43,10 @@ export class ModalLoginComponent implements OnInit {
         this.error=false;
         this. mostrar=false;
         this.router.navigate(['/gerente',usuario.id]);
-       //
+
+        $('#modal_login').modal('toggle');
+        $("#login").hide();
+        $("#logout").show();
         break;
       }else{
         this.error=true;

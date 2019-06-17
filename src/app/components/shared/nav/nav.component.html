@@ -18,7 +18,10 @@
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item mx-3">
-                    <a class="nav-link" [routerLink]="['/gerente']" data-toggle="modal" data-target="#modal_login"><i class="fa fa-user"></i> Acceder</a>
+                    <a id="login" class="nav-link" [routerLink]="['/gerente']" data-toggle="modal" data-target="#modal_login"><i class="fa fa-user"></i> Acceder</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a id="logout" class="nav-link" [routerLink]="['/home']"><i class="fa fa-sign-out"></i> Salir</a>
                 </li>
             </ul>
         </div>

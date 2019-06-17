@@ -6,16 +6,31 @@
         <form class="container" [formGroup]="">
             <table class="table">
                 <tr>
-                    <td><label>Ingresar Excel: &nbsp;&nbsp;</label></td>
-                    <td><input type="file" class="form-control-file" id="cargar-doc" accept=".xlsx" (change)="incomingfile($event)"></td>
+                    
+                    <td colspan="3">
+                        <div class="custom-file">
+                          <input type="file" class="custom-file-input" id="cargar-doc" accept=".xlsx" (change)="incomingfile($event)" >
+                          <label class="custom-file-label" for="customFile"> ... </label>
+                        </div>
+                    </td>
+
+
                 </tr>
-                <tr>
+                <tr class="d-none">
                     <td><label for="inputPagina">Pagina Excel:&nbsp;</label></td>
                     <td><input type="number" class="form-control" id="inputPagina" placeholder="Pagina"></td>
                 </tr>
                 <tr>
-                    <td id="btnsubirexcel" colspan="2"><button type="button" class="btn btn-primary btn-sm" (click)="Upload()">Subir Excel</button></td>
-                    <td id="btnsubirexcel" colspan="2"><button type="button" class="btn btn-primary btn-sm" (click)="onSubmit()">Importar</button></td>
+                    <td colspan="1"><button id="btnsubirexcel" type="button" class="btn btn-primary btn-sm" (click)="Upload()">Subir Excel</button></td>
+
+                    <td colspan="1"><button type="button" class="btn btn-primary btn-sm" (click)="onSubmit()">Importar</button>            
+                    </td>
+
+                    <td>
+                        <div id="spinner_cartera" class="spinner-border text-dark" role="status">
+                          <span class="sr-only">Loading...</span>
+                        </div>
+                    </td>
                 </tr>
             </table>
         </form>

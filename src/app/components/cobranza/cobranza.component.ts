@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Cartera} from '../../modals/Cartera';
+import { Cobranza } from '../../modals/Cobranza';
 import * as XLSX from 'xlsx';
 
 declare var $:any;
@@ -16,7 +16,7 @@ export class CobranzaComponent implements OnInit {
   dtoptions:any;
   data:any;
 	file:File;
-  private listacarteras = new Array();
+  private listacobranza = new Array();
 
   constructor() {
     this.dtoptions = {
@@ -29,6 +29,16 @@ export class CobranzaComponent implements OnInit {
 
   ngOnInit() {
     $("#exceltable").hide();
+    $("#spinner_cobranza").hide();
+    
+    $("#btnsubirexcel").click(function(){
+      $("#spinner_cobranza").show();
+    });
+
+    $(".custom-file-input").on("change", function() {
+      var fileName = $(this).val().split("\\").pop();
+      $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
   }
 
     incomingfile(event) {
@@ -53,11 +63,12 @@ export class CobranzaComponent implements OnInit {
   	            this.GenerarEncabezado();
   	            this.ValidarContenidoFilas();
   	            $('#exceltable').show();
-  	            this.listacarteras = this.PasstoCarteraArray();
+                $("#spinner_cobranza").hide();
+  	            this.listacobranza = this.PasstoCarteraArray();
   	            $('#exceltable').DataTable(this.dtoptions);
   	            //this.SelectedRow();
   	            //this.ColumnsHidden();
-  	            console.log(this.file);
+  	            console.log(this.listacobranza);
   	        }
   	        fileReader.readAsArrayBuffer(this.file);
   	}
@@ -94,32 +105,23 @@ export class CobranzaComponent implements OnInit {
   	  });
   	}
 
-  	PasstoCarteraArray(): Cartera[]{
+  	PasstoCarteraArray(): Cobranza[]{
   	  var lista = new Array();
   	  $("#exceltable tbody tr").each(function(indice,elemento){
   	      let elem = $(elemento);
-  	      let cartera = new Cartera();
-  	      cartera.empresa = elem.children('td').eq(0).text();
-  	      cartera.sucursal = elem.children('td').eq(1).text();
-  	      cartera.ruc = elem.children('td').eq(2).text();
-  	      cartera.codigo_sip = elem.children('td').eq(3).text();
-  	      cartera.razon_social = elem.children('td').eq(4).text();
-  	      cartera.direccion = elem.children('td').eq(5).text();
-  	      //cartera.dist_legal = elem.children('td').eq(6).text();
-  	      //cartera.dir_entrega = elem.children('td').eq(7).text();
-  	      //cartera.dist_entrega = elem.children('td').eq(8).text();
-  	      //cartera.clase = elem.children('td').eq(9).text();
-  	      cartera.tipo_doc = elem.children('td').eq(10).text();
-  	      cartera.factura = elem.children('td').eq(11).text();
-  	      cartera.fecha_emi = elem.children('td').eq(12).text();
-  	      cartera.fecha_venc = elem.children('td').eq(13).text();
-  	      //cartera.dias = parseInt(elem.children('td').eq(14).text());
-  	      //cartera.aging = elem.children('td').eq(15).text();
-  	      cartera.moneda = elem.children('td').eq(16).text();
-  	      cartera.importe_og = parseInt(elem.children('td').eq(17).text());
-  	      //cartera.cobranza = parseInt(elem.children('td').eq(18).text());
-  	      cartera.saldo_act = parseInt(elem.children('td').eq(19).text());
-  	      cartera.saldo_equiv = parseInt(elem.children('td').eq(20).text());
+  	      let cobranza = new Cobranza();
+  	      cobranza.cliente = elem.children('td').eq(4).text();
+          cobranza.sucursal = elem.children('td').eq(6).text();
+          cobranza.cod_cliente = parseInt(elem.children('td').eq(3).text());
+  	      cobranza.banco = elem.children('td').eq(1).text();
+          cobranza.factura = elem.children('td').eq(16).text();
+          cobranza.monto_fact_ind = parseFloat(elem.children('td').eq(17).text());
+          cobranza.fecha_trans = elem.children('td').eq(21).text();
+          cobranza.fecha_depo = elem.children('td').eq(5).text();
+          cobranza.depo_total = parseFloat(elem.children('td').eq(9).text());
+  	      cobranza.estado = elem.children('td').eq(22).text();
+
+
   	      //cartera.soles = parseInt(elem.children('td').eq(21).text());
   	      //cartera.cond_pago_dias = parseInt(elem.children('td').eq(22).text());
   	      //cartera.cobrador = elem.children('td').eq(23).text();
@@ -154,7 +156,7 @@ export class CobranzaComponent implements OnInit {
   	      cartera.motivo_disputa = elem.children('td').eq(30).text();
   	      cartera.motivo_castigo = elem.children('td').eq(31).text();
   	      */
-  	      lista.push(cartera);
+  	      lista.push(cobranza);
 
   	      //console.log(lista);
   	      //console.log(lista);

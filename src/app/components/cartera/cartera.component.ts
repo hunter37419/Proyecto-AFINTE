@@ -32,6 +32,17 @@ export class CarteraComponent implements OnInit {
 
   ngOnInit() {
     $("#exceltable").hide();
+    $("#spinner_cartera").hide();
+    
+    $("#btnsubirexcel").click(function(){
+      $("#spinner_cartera").show();
+    });
+
+    $(".custom-file-input").on("change", function() {
+      var fileName = $(this).val().split("\\").pop();
+      $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
+
   }
 
     incomingfile(event) {
@@ -39,6 +50,7 @@ export class CarteraComponent implements OnInit {
   	}
 
   	Upload() {
+          
   	      let fileReader = new FileReader();
   	        fileReader.onload = (e) => {
   	            this.arrayBuffer = fileReader.result;
@@ -56,6 +68,7 @@ export class CarteraComponent implements OnInit {
   	            this.GenerarEncabezado();
   	            this.ValidarContenidoFilas();
   	            $('#exceltable').show();
+                $("#spinner_cartera").hide();
   	            this.listacarteras = this.PasstoCarteraArray();
   	            $('#exceltable').DataTable(this.dtoptions);
   	            //this.SelectedRow();

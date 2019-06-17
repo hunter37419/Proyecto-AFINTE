@@ -24,6 +24,13 @@ export class NavComponent implements OnInit {
 	       }
 	       
 		});
+
+		$("#logout").hide();
+
+		$("#logout").click(function(){
+			$("#logout").hide();
+			$("#login").show();
+		});
   		
   }
 

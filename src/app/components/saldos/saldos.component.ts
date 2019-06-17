@@ -28,6 +28,16 @@ export class SaldosComponent implements OnInit {
 
   ngOnInit() {
     $("#exceltable").hide();
+    $("#spinner_saldo").hide();
+    
+    $("#btnsubirexcel").click(function(){
+      $("#spinner_saldo").show();
+    });
+
+    $(".custom-file-input").on("change", function() {
+      var fileName = $(this).val().split("\\").pop();
+      $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
   }
 
     incomingfile(event) {
@@ -52,6 +62,7 @@ export class SaldosComponent implements OnInit {
   	            this.GenerarEncabezado();
   	            this.ValidarContenidoFilas();
   	            $('#exceltable').show();
+                $("#spinner_saldo").hide();
   	            this.listacarteras = this.PasstoCarteraArray();
   	            $('#exceltable').DataTable(this.dtoptions);
   	            //this.SelectedRow();
