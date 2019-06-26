@@ -52,6 +52,8 @@ import { ListaCarteraComponent } from './components/cartera/lista-cartera/lista-
 import { ListaCobranzaCierreComponent } from './components/saldos/lista-cobranza-cierre/lista-cobranza-cierre.component';
 import { AsignarCustomerComponent } from './components/customer/asignar-customer/asignar-customer.component';
 import { AsignarCustomer2Component } from './components/customer/asignar-customer2/asignar-customer2.component';
+import { CobrarComponent } from './components/cobrar/cobrar.component';
+import { ListCobranzaComponent } from './components/list-cobranza/list-cobranza.component';
 
 @NgModule({
   declarations: [
@@ -84,7 +86,9 @@ import { AsignarCustomer2Component } from './components/customer/asignar-custome
     ListaCarteraComponent,
     ListaCobranzaCierreComponent,
     AsignarCustomerComponent,
-    AsignarCustomer2Component
+    AsignarCustomer2Component,
+    CobrarComponent,
+    ListCobranzaComponent
   ],
   imports: [
     HttpClientModule,

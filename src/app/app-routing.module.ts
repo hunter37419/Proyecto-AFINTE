@@ -22,6 +22,8 @@ import { ListaCarteraComponent } from './components/cartera/lista-cartera/lista-
 import { ListaCobranzaCierreComponent } from './components/saldos/lista-cobranza-cierre/lista-cobranza-cierre.component';
 import { AsignarCustomerComponent } from './components/customer/asignar-customer/asignar-customer.component';
 import { AsignarCustomer2Component } from './components/customer/asignar-customer2/asignar-customer2.component';
+import { ListCobranzaComponent } from './components/list-cobranza/list-cobranza.component';
+import { CobrarComponent } from './components/cobrar/cobrar.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent,data: {animation: 'HomeView'}},
@@ -44,6 +46,8 @@ const routes: Routes = [
   { path: 'edit-empresa', component: EditEmpresaComponent },
   { path: 'lista-cartera', component: ListaCarteraComponent },
   { path: 'list-empresa', component: ListEmpresaComponent },
+  { path: 'list-cobranza', component: ListCobranzaComponent },
+  { path: 'cobrar', component: CobrarComponent },
   { path: 'lista-cobranza-cierre', component: ListaCobranzaCierreComponent },
   {path: '**', pathMatch: 'full' , redirectTo: 'home'}
 ];

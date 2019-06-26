@@ -1,0 +1,26 @@
+<app-sidebar></app-sidebar>
+<div class="container">
+<div class="col">
+    <h2 class="text-center">HELOUDA GG</h2>
+    <hr>
+    <!--<button class="btn btn-primary" (click)="addCobranza()">Agregar</button>--->
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th class="hidden">Id</th>
+                <th>Cliente</th>
+                <th>Banco</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cobranza of cobranzas">
+                <td class="hidden">{{ cobranza.llave }}</td>
+                <td>{{ cobranza.cliente }}</td>
+                <td>{{ cobranza.banco }}</td>
+                <td>{{ cobranza.estado }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
