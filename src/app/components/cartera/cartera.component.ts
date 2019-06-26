@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild} from '@angular/core';
 import { Cartera} from '../../modals/Cartera';
+import { Empresa} from '../../modals/Empresa';
 import * as XLSX from 'xlsx';
 import { CarteraService } from 'src/app/services/cartera.service';
 import { Router } from '@angular/router';
@@ -20,6 +21,7 @@ export class CarteraComponent implements OnInit {
   data:any;
 	file:File;
   private listacarteras = new Array();
+  private listaEmpresas = new Array();
 
   constructor( public router: Router, public service: CarteraService) {
     this.dtoptions = {
@@ -61,7 +63,7 @@ export class CarteraComponent implements OnInit {
   	            var workbook = XLSX.read(bstr, {type:"binary"});
   	            var first_sheet_name = workbook.SheetNames[1];
   	            var worksheet = workbook.Sheets[first_sheet_name];
-  	            console.log(XLSX.utils.sheet_to_json(worksheet,{raw:true}));
+  	            //console.log(XLSX.utils.sheet_to_json(worksheet,{raw:true}));
   	            var htmlstr = XLSX.write(workbook,{sheet:first_sheet_name, type:'string',bookType:'html'});
   	            $('#exceltable tbody')[0].innerHTML = htmlstr;
   	            this.ValidarPrimeraFila();  
@@ -69,11 +71,12 @@ export class CarteraComponent implements OnInit {
   	            this.ValidarContenidoFilas();
   	            $('#exceltable').show();
                 $("#spinner_cartera").hide();
-  	            this.listacarteras = this.PasstoCarteraArray();
+  	            //this.listacarteras = this.PasstoCarteraArray();
+                this.PasstoData();
   	            $('#exceltable').DataTable(this.dtoptions);
   	            //this.SelectedRow();
   	            //this.ColumnsHidden();
-  	            console.log(this.listacarteras);
+  	            //console.log(this.listacarteras);
   	        }
   	        fileReader.readAsArrayBuffer(this.file);
   	}
@@ -111,10 +114,18 @@ export class CarteraComponent implements OnInit {
   	  });
   	}
 
-  	PasstoCarteraArray(): Cartera[]{
-  	  var lista = new Array();
+  	PasstoData(){
+
+  	  let lista_cartera = new Array();
+      let lista_empresa = new Array();
+
+      let lista_rucs = new Array();
+
   	  $("#exceltable tbody tr").each(function(indice,elemento){
+
   	      let elem = $(elemento);
+
+          //Add new Cartera x Row
   	      let cartera = new Cartera();
   	      cartera.empresa = elem.children('td').eq(0).text();
   	      cartera.sucursal = elem.children('td').eq(1).text();
@@ -122,65 +133,47 @@ export class CarteraComponent implements OnInit {
   	      cartera.codigo_sip = elem.children('td').eq(3).text();
   	      cartera.razon_social = elem.children('td').eq(4).text();
   	      cartera.direccion = elem.children('td').eq(5).text();
-  	      //cartera.dist_legal = elem.children('td').eq(6).text();
-  	      //cartera.dir_entrega = elem.children('td').eq(7).text();
-  	      //cartera.dist_entrega = elem.children('td').eq(8).text();
-  	      //cartera.clase = elem.children('td').eq(9).text();
   	      cartera.tipo_doc = elem.children('td').eq(6).text();
   	      cartera.factura = elem.children('td').eq(7).text();
   	      cartera.fecha_emi = elem.children('td').eq(8).text();
   	      cartera.fecha_venc = elem.children('td').eq(9).text();
-  	      //cartera.dias = parseInt(elem.children('td').eq(14).text());
-  	      //cartera.aging = elem.children('td').eq(15).text();
   	      cartera.moneda = elem.children('td').eq(10).text();
   	      cartera.importe_og = parseInt(elem.children('td').eq(11).text());
-  	      //cartera.cobranza = parseInt(elem.children('td').eq(18).text());
   	      cartera.saldo_act = parseInt(elem.children('td').eq(12).text());
-			cartera.saldo_equiv = parseInt(elem.children('td').eq(13).text());
-			cartera.dias = parseInt(elem.children('td').eq(14).text());
-  	      //cartera.soles = parseInt(elem.children('td').eq(21).text());
-  	      //cartera.cond_pago_dias = parseInt(elem.children('td').eq(22).text());
-  	      //cartera.cobrador = elem.children('td').eq(23).text();
-  	      //cartera.vend_gases = elem.children('td').eq(24).text();
-  	      //cartera.vend_mercaderia = elem.children('td').eq(25).text();
-
-  	      /*
-  	      if(elem.children('td').eq(26).text()=='VERDADERO'){
-  	        cartera.disputa = true;
-  	      }else{
-  	        cartera.disputa = false;
-  	      }
-
-  	      if(elem.children('td').eq(27).text()=='VERDADERO'){
-  	        cartera.legal = true;
-  	      }else{
-  	        cartera.legal = false;
-  	      }
-
-  	      if(elem.children('td').eq(28).text()=='VERDADERO'){
-  	        cartera.castigo = true;
-  	      }else{
-  	        cartera.castigo = false;
-  	      }
-
-  	      if(elem.children('td').eq(29).text()=='VERDADERO'){
-  	        cartera.provisionado = true;
-  	      }else{
-  	        cartera.provisionado = false;
-  	      }
-
-  	      cartera.motivo_disputa = elem.children('td').eq(30).text();
-  	      cartera.motivo_castigo = elem.children('td').eq(31).text();
-  	      */
-		   
+			    cartera.saldo_equiv = parseInt(elem.children('td').eq(13).text());
+			    cartera.dias = parseInt(elem.children('td').eq(14).text());
 		  
-  	      lista.push(cartera);
-        
-  	      //console.log(lista);
-  	      //console.log(lista);
+  	      lista_cartera.push(cartera);
+
+
+          //Add new Empresa x Row (Repeats)
+          let empresa = new Empresa();
+          
+          //Valido que los RUC no se repitan
+          if( lista_rucs.indexOf(elem.children('td').eq(2).text()) < 0){
+            lista_rucs.push( elem.children('td').eq(2).text() );
+
+            empresa.ruc = elem.children('td').eq(2).text();
+            empresa.nombre = elem.children('td').eq(4).text();
+            empresa.dir_legal = elem.children('td').eq(5).text();
+            empresa.dis_legal = elem.children('td').eq(6).text();
+            empresa.dir_entrega = elem.children('td').eq(7).text();
+            empresa.dis_entrega = elem.children('td').eq(8).text();
+            lista_empresa.push(empresa);
+          }
+          
+          
+          
   	  });
-  	    return lista;
+
+
+        this.listacarteras = lista_cartera;
+        this.listaEmpresas = lista_empresa;
+        console.log(this.listacarteras);
+        console.log(this.listaEmpresas);
+  	    //return lista;
   	}
+
 	  onSubmit() {
 		for (let cartera of this.listacarteras){
 		this.service.createCustomer(cartera )
