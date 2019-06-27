@@ -150,7 +150,7 @@ export class ImportacionXlxComponent implements OnInit {
         cartera.importe_og = parseInt(elem.children('td').eq(17).text());
         //cartera.cobranza = parseInt(elem.children('td').eq(18).text());
         cartera.saldo_act = parseInt(elem.children('td').eq(19).text());
-        cartera.saldo_equiv = parseInt(elem.children('td').eq(20).text());
+        cartera.saldo_equi = parseInt(elem.children('td').eq(20).text());
         //cartera.soles = parseInt(elem.children('td').eq(21).text());
         //cartera.cond_pago_dias = parseInt(elem.children('td').eq(22).text());
         //cartera.cobrador = elem.children('td').eq(23).text();

@@ -1,5 +1,4 @@
 export class Cobranza{
-
 	llave:number;
 	cliente:string;
 	sucursal:string;
@@ -11,5 +10,4 @@ export class Cobranza{
 	fecha_depo:Date;
 	depo_total:number;
 	estado:string;
-
 }

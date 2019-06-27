@@ -133,15 +133,15 @@ export class CarteraComponent implements OnInit {
   	      cartera.codigo_sip = elem.children('td').eq(3).text();
   	      cartera.razon_social = elem.children('td').eq(4).text();
   	      cartera.direccion = elem.children('td').eq(5).text();
-  	      cartera.tipo_doc = elem.children('td').eq(6).text();
-  	      cartera.factura = elem.children('td').eq(7).text();
-  	      cartera.fecha_emi = elem.children('td').eq(8).text();
-  	      cartera.fecha_venc = elem.children('td').eq(9).text();
-  	      cartera.moneda = elem.children('td').eq(10).text();
-  	      cartera.importe_og = parseInt(elem.children('td').eq(11).text());
-  	      cartera.saldo_act = parseInt(elem.children('td').eq(12).text());
-			    cartera.saldo_equiv = parseInt(elem.children('td').eq(13).text());
-			    cartera.dias = parseInt(elem.children('td').eq(14).text());
+  	      cartera.tipo_doc = elem.children('td').eq(10).text();
+  	      cartera.factura = elem.children('td').eq(11).text();
+  	      cartera.fecha_emi = elem.children('td').eq(12).text();
+  	      cartera.fecha_venc = elem.children('td').eq(13).text();
+  	      cartera.moneda = elem.children('td').eq(16).text();
+  	      cartera.importe_og = parseInt(elem.children('td').eq(19).text());
+  	      cartera.saldo_act = parseInt(elem.children('td').eq(21).text());
+		  cartera.saldo_equi = parseInt(elem.children('td').eq(22).text());
+		  
 		  
   	      lista_cartera.push(cartera);
 

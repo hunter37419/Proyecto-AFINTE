@@ -1,7 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Cobranza } from '../../modals/Cobranza';
 import * as XLSX from 'xlsx';
-
+import { CobranzaService } from 'src/app/services/cobranza.service';
+import { Router } from '@angular/router';
 declare var $:any;
 @Component({
   selector: 'app-cobranza',
@@ -18,7 +19,7 @@ export class CobranzaComponent implements OnInit {
 	file:File;
   private listacobranza = new Array();
 
-  constructor() {
+  constructor(public router: Router, public service: CobranzaService) {
     this.dtoptions = {
       pageLength:25,
       scrollY : 400,
@@ -64,7 +65,7 @@ export class CobranzaComponent implements OnInit {
   	            this.ValidarContenidoFilas();
   	            $('#exceltable').show();
                 $("#spinner_cobranza").hide();
-  	            this.listacobranza = this.PasstoCarteraArray();
+  	            this.listacobranza = this.PasstoCobranzaArray();
   	            $('#exceltable').DataTable(this.dtoptions);
   	            //this.SelectedRow();
   	            //this.ColumnsHidden();
@@ -105,7 +106,7 @@ export class CobranzaComponent implements OnInit {
   	  });
   	}
 
-  	PasstoCarteraArray(): Cobranza[]{
+  	PasstoCobranzaArray(): Cobranza[]{
   	  var lista = new Array();
   	  $("#exceltable tbody tr").each(function(indice,elemento){
   	      let elem = $(elemento);
@@ -121,47 +122,16 @@ export class CobranzaComponent implements OnInit {
           cobranza.depo_total = parseFloat(elem.children('td').eq(9).text());
   	      cobranza.estado = elem.children('td').eq(22).text();
 
-
-  	      //cartera.soles = parseInt(elem.children('td').eq(21).text());
-  	      //cartera.cond_pago_dias = parseInt(elem.children('td').eq(22).text());
-  	      //cartera.cobrador = elem.children('td').eq(23).text();
-  	      //cartera.vend_gases = elem.children('td').eq(24).text();
-  	      //cartera.vend_mercaderia = elem.children('td').eq(25).text();
-
-  	      /*
-  	      if(elem.children('td').eq(26).text()=='VERDADERO'){
-  	        cartera.disputa = true;
-  	      }else{
-  	        cartera.disputa = false;
-  	      }
-
-  	      if(elem.children('td').eq(27).text()=='VERDADERO'){
-  	        cartera.legal = true;
-  	      }else{
-  	        cartera.legal = false;
-  	      }
-
-  	      if(elem.children('td').eq(28).text()=='VERDADERO'){
-  	        cartera.castigo = true;
-  	      }else{
-  	        cartera.castigo = false;
-  	      }
-
-  	      if(elem.children('td').eq(29).text()=='VERDADERO'){
-  	        cartera.provisionado = true;
-  	      }else{
-  	        cartera.provisionado = false;
-  	      }
-
-  	      cartera.motivo_disputa = elem.children('td').eq(30).text();
-  	      cartera.motivo_castigo = elem.children('td').eq(31).text();
-  	      */
   	      lista.push(cobranza);
-
-  	      //console.log(lista);
-  	      //console.log(lista);
   	  });
   	    return lista;
   	}
-
+	  onSubmit() {
+		for (let cobranza of this.listacobranza){
+		this.service.createCobranza(cobranza)
+		  .subscribe(data => {
+			
+		  });
+		}
+	  }
 }
