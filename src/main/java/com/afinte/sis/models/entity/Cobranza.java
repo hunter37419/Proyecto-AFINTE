@@ -17,40 +17,30 @@ public class Cobranza {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="llave")
 	private Integer llave;
-	
 	@Column(name="cliente")
 	private String cliente;
-	
 	@Column(name="sucursal")
 	private String sucursal;
-	
 	@Column(name="cod_cliente")
 	private Integer cod_cliente;
-	
 	@Column(name="banco")
 	private String banco;
-	
 	@Column(name="factura")
 	private String factura;
-	
 	@Column(name="monto_fact_ind")
 	private double monto_fact_ind;
-	
 	@Column(name="fecha_trans")
 	private Date fecha_trans;
-	
 	@Column(name="fecha_Depo")
 	private Date fecha_Depo;
-	
 	@Column(name="depo_total")
 	private double depo_total;
-	
 	@Column(name="estado")
 	private String estado;
 	
 	
 	public Cobranza() {
-		
+		super();
 	}
 
 	public Integer getLlave() {

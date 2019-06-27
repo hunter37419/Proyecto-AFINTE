@@ -50,7 +50,7 @@ public class CarteraController {
 		// also just in case the pass an id in JSON ... set id to 0
 		// this is force a save of new item ... instead of update
 
-		cartera.setId(null);
+		cartera.setLlave(null);
 
 		carteraService.saveCarteras(cartera);
 
