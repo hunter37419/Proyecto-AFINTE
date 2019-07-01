@@ -9,23 +9,22 @@
                     <tr>
                         <th class="hidden">Id</th>
                         <th>Ruc</th>
-                        <th>Aging</th>
-                        <th>Castigo</th>
-                        <th>Clase</th>
-                        <th>Cobrador</th>
-                        <th>Cobranza</th>
-                        <th>operacion</th>
+                        <th>Razon Social</th>
+                        <th>Sucursal</th>
+                        <th>Factura</th>
+                        <th>Tipo Docum.</th>
+                        <th>Saldo Actual</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr *ngFor="let carteras of cartera | paginate: { itemsPerPage: 10, currentPage: pageActual }">
                         <td class="hidden">{{ carteras.llave }}</td>
                         <td>{{ carteras.ruc }}</td>
-                        <td>{{ carteras.aging }}</td>
-                        <td>{{ carteras.castigo }}</td>
-                        <td>{{ carteras.clase }}</td>
-                        <td>{{ carteras.cobrador }}</td>
-                        <td>{{ carteras.cobranza }}</td>
+                        <td>{{ carteras.razon_social }}</td>
+                        <td>{{ carteras.sucursal }}</td>
+                        <td>{{ carteras.factura }}</td>
+                        <td>{{ carteras.tipo_doc }}</td>
+                        <td>{{ carteras.saldo_act }}</td>
 
                         <td>
 

@@ -74,9 +74,6 @@ export class CarteraComponent implements OnInit {
   	            //this.listacarteras = this.PasstoCarteraArray();
                 this.PasstoData();
   	            $('#exceltable').DataTable(this.dtoptions);
-  	            //this.SelectedRow();
-  	            //this.ColumnsHidden();
-  	            //console.log(this.listacarteras);
   	        }
   	        fileReader.readAsArrayBuffer(this.file);
   	}
