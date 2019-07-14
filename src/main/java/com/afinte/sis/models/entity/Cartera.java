@@ -17,183 +17,148 @@ public class Cartera{
 	    @Id
 		@GeneratedValue(strategy=GenerationType.IDENTITY)
 		@Column(name="llave")
-		private Integer id;
+		private Integer llave;
 		
 		@Column(name="empresa")
 		private String empresa;
 		
 		@Column(name="sucursal")
-		private String sucur;
+		private String sucursal;
 		
 		@Column(name="ruc")
 		private String ruc;
 		
 		@Column(name="codigo_sip")
-		private int codsip;
+		private Integer codigo_sip;
 		
 		@Column(name="razon_social")
-		private String razonsoc;
+		private String razon_social;
 		
 		@Column(name="direccion")
-		private String dirempre;
+		private String direccion;
 		
-		@Column(name="tipo_Doc")
-		private String tipdoc;
+		@Column(name="tipo_doc")
+		private String tipo_doc;
 		
 		@Column(name="factura")
-		private String fac;
+		private String factura;
 		
 		@Column(name="fecha_emi")
-		private Date fechaemi;
+		private Date fecha_emi;
 		
 		@Column(name="fecha_venc")
-		private Date fechavenc;
+		private Date fecha_venc;
 		
 		@Column(name="moneda")
 		private String moneda;
 		
 		@Column(name="importe_og")
-		private BigDecimal impog;
+		private BigDecimal importe_og;
 		
 		@Column(name="saldo_act")
-		private BigDecimal saldoact;
+		private BigDecimal saldo_act;
 		
 		@Column(name="saldo_equi")
-		private BigDecimal saldoequi;
+		private BigDecimal saldo_equi;
 		
 		
 		public Cartera() {
-			
+			super();	
 		}
-
-		public Integer getId() {
-			return id;
-		}
-
-		public void setId(Integer id) {
-			this.id= id;
-		}
-
 		
-			public String getEmpresa() {
+		public Integer getLlave() {
+			return llave;
+		}
+		public void setLlave(Integer llave) {
+			this.llave = llave;
+		}
+		public String getEmpresa() {
 			return empresa;
 		}
-
 		public void setEmpresa(String empresa) {
 			this.empresa = empresa;
 		}
-
-		public String getSucur() {
-			return sucur;
+		public String getSucursal() {
+			return sucursal;
 		}
-
-		public void setSucur(String sucur) {
-			this.sucur = sucur;
+		public void setSucursal(String sucursal) {
+			this.sucursal = sucursal;
 		}
-
 		public String getRuc() {
 			return ruc;
 		}
-
 		public void setRuc(String ruc) {
 			this.ruc = ruc;
 		}
-
-		public int getCodsip() {
-			return codsip;
+		public Integer getCodigo_sip() {
+			return codigo_sip;
 		}
-
-		public void setCodsip(int codsip) {
-			this.codsip = codsip;
+		public void setCodigo_sip(int codigo_sip) {
+			this.codigo_sip = codigo_sip;
 		}
-
-		public String getRazonsoc() {
-			return razonsoc;
+		public String getRazon_social() {
+			return razon_social;
 		}
-
-		public void setRazonsoc(String razonsoc) {
-			this.razonsoc = razonsoc;
+		public void setRazon_social(String razon_social) {
+			this.razon_social = razon_social;
 		}
-
-		public String getDirempre() {
-			return dirempre;
+		public String getDireccion() {
+			return direccion;
 		}
-
-		public void setDirempre(String dirempre) {
-			this.dirempre = dirempre;
+		public void setDireccion(String direccion) {
+			this.direccion = direccion;
 		}
-
-		public String getTipdoc() {
-			return tipdoc;
+		public String getTipo_doc() {
+			return tipo_doc;
 		}
-
-		public void setTipdoc(String tipdoc) {
-			this.tipdoc = tipdoc;
+		public void setTipo_doc(String tipo_doc) {
+			this.tipo_doc = tipo_doc;
 		}
-
-		public String getFac() {
-			return fac;
+		public String getFactura() {
+			return factura;
 		}
-
-		public void setFac(String fac) {
-			this.fac = fac;
+		public void setFactura(String factura) {
+			this.factura = factura;
 		}
-
-		public Date getFechaemi() {
-			return fechaemi;
+		public Date getFecha_emi() {
+			return fecha_emi;
 		}
-
-		public void setFechaemi(Date fechaemi) {
-			this.fechaemi = fechaemi;
+		public void setFecha_emi(Date fecha_emi) {
+			this.fecha_emi = fecha_emi;
 		}
-
-		public Date getFechavenc() {
-			return fechavenc;
+		public Date getFecha_venc() {
+			return fecha_venc;
 		}
-
-		public void setFechavenc(Date fechavenc) {
-			this.fechavenc = fechavenc;
+		public void setFecha_venc(Date fecha_venc) {
+			this.fecha_venc = fecha_venc;
 		}
-
 		public String getMoneda() {
 			return moneda;
 		}
-
 		public void setMoneda(String moneda) {
 			this.moneda = moneda;
 		}
-
-		
-		public BigDecimal getImpog() {
-			return impog;
+		public BigDecimal getImporte_og() {
+			return importe_og;
 		}
-
-		public void setImpog(BigDecimal impog) {
-			this.impog = impog;
+		public void setImporte_og(BigDecimal importe_og) {
+			this.importe_og = importe_og;
 		}
-
-		public BigDecimal getSaldoact() {
-			return saldoact;
+		public BigDecimal getSaldo_act() {
+			return saldo_act;
 		}
-
-		public void setSaldoact(BigDecimal saldoact) {
-			this.saldoact = saldoact;
+		public void setSaldo_act(BigDecimal saldo_act) {
+			this.saldo_act = saldo_act;
 		}
-
-		public BigDecimal getSaldoequi() {
-			return saldoequi;
+		public BigDecimal getSaldo_equi() {
+			return saldo_equi;
 		}
-
-		public void setSaldoequi(BigDecimal saldoequi) {
-			this.saldoequi = saldoequi;
+		public void setSaldo_equi(BigDecimal saldo_equi) {
+			this.saldo_equi = saldo_equi;
 		}
-
-		@Override
+		@Override 
 		public String toString() {
-			return "Cartera [id=" + id + ", Empresa=" + empresa + ", sucursal=" + sucur +
-					 ", Ruc=" + ruc + ", Codigo_sip="+codsip+" , razon_social="+razonsoc+" , Direccion="+dirempre+" "
-					 		+ ", Tipo_Doc="+tipdoc+" , Factura="+fac+" , fecha_emi="+fechaemi+
-					 		" , fecha_venc="+fechavenc+" , moneda="+moneda+" , Importe_og="+impog+" ,Saldo_act="+saldoact+" ,Saldo_equi="+saldoequi+ "]";
+			return "Cartera [llave=" + llave + ", empresa=" + empresa + ", sucursal=" + sucursal + ", ruc=" + ruc + ", codigo_sip="+codigo_sip+" , razon_social="+razon_social+" , direccion="+direccion+ ", tipo_doc="+tipo_doc+" , factura="+factura+" , fecha_emi="+fecha_emi+" , fecha_venc="+fecha_venc+" , moneda="+moneda+" , importe_og="+importe_og+" ,saldo_act="+saldo_act+" ,saldo_equi="+saldo_equi+ "]";
 		}
 
 	}
