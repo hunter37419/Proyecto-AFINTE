@@ -5,6 +5,7 @@ import java.util.List;
 import com.afinte.sis.models.entity.Empresas;
 
 public interface EmpresaService {
+	
 	public List<Empresas> getEmpresa();
 
 	public void saveEmpresa(Empresas Empresa);
@@ -12,4 +13,6 @@ public interface EmpresaService {
 	public Empresas getEmpresa(Integer theId);
 
 	public void deleteEmpresa(Integer theId);
+	
+	public List<Empresas> findByRuc( String ruc );
 }

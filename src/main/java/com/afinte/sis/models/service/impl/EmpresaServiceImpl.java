@@ -41,4 +41,12 @@ public class EmpresaServiceImpl implements EmpresaService {
 
 		empresaDAO.deleteById(theId);
 	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public List<Empresas> findByRuc(String ruc) {
+		// TODO Auto-generated method stub
+		return empresaDAO.findByRucStartingWith(ruc);
+	}
+
 }

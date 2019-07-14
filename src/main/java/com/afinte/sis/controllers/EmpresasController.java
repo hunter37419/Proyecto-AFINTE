@@ -1,5 +1,6 @@
 package com.afinte.sis.controllers;
 
+import java.io.Console;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -35,6 +36,13 @@ public class EmpresasController {
 				Empresas usuario = empresaService.getEmpresa(empresaId);
 
 				return usuario;
+			}
+			
+			@GetMapping("/empresa/ruc/{ruc}")
+			public List<Empresas> findByName(@PathVariable String ruc){
+				List<Empresas> empresas = empresaService.findByRuc(ruc);
+				//System.out.println(empresas);
+				return empresas;
 			}
 			
 			@PostMapping("/empresa")
