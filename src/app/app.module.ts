@@ -17,8 +17,10 @@ import {NgxPaginationModule} from 'ngx-pagination';
 
 import { ContactComponent } from './components/contact/contact.component';
 import { SidebarComponent } from './components/shared/sidebar/sidebar.component';
+import { Sidebar2Component } from './components/shared/sidebar2/sidebar2.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { GerenteComponent } from './components/perfil/gerente/gerente.component';
+import { CobradorComponent } from './components/perfil/cobrador/cobrador.component';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule} from '@angular/common/http';
 import { ImportacionXlxComponent } from './components/importacion-xlx/importacion-xlx.component';
@@ -88,7 +90,8 @@ import { ListCobranzaComponent } from './components/list-cobranza/list-cobranza.
     AsignarCustomerComponent,
     AsignarCustomer2Component,
     CobrarComponent,
-    ListCobranzaComponent
+    ListCobranzaComponent,
+    CobradorComponent,
   ],
   imports: [
     HttpClientModule,
