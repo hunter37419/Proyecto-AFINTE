@@ -24,11 +24,14 @@ import { AsignarCustomerComponent } from './components/customer/asignar-customer
 import { AsignarCustomer2Component } from './components/customer/asignar-customer2/asignar-customer2.component';
 import { ListCobranzaComponent } from './components/list-cobranza/list-cobranza.component';
 import { CobrarComponent } from './components/cobrar/cobrar.component';
+import { CobradorComponent } from './components/perfil/cobrador/cobrador.component';
+
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent,data: {animation: 'HomeView'}},
   // {path: 'gerente', component: GerenteComponent},
   {path: 'gerente/:id', component: GerenteComponent},
+  {path: 'cobrador/:id', component: CobradorComponent},
   {path: 'nosotros', component: NosotrosComponent,data: {animation: 'NosotrosView'}},
   {path: 'cartera', component: CarteraComponent},
   {path: 'cobranza', component: CobranzaComponent},

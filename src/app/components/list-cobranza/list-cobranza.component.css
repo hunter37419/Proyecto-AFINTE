@@ -12,31 +12,11 @@
 }
 
 .position {
-<<<<<<< HEAD
     margin-left:170px;
-=======
     margin-left: 240px;
->>>>>>> bfddd20d12da3f7049353f4c21adf2b6f60d23ae
     margin-top: 60px;
 }
 
 td {
-<<<<<<< HEAD
     color: black;
-=======
-    color: white;
-}
-
-.contenido {
-    background: url('/assets/img/bg-cobranzas.jpg') no-repeat;
-    //background: url('/assets/img/cobranza banner.jpeg') no-repeat;
-    //background: url('/assets/img/cobro.jpg') no-repeat;
-    min-height: 100vh;
-    background-size: cover;
-    background-attachment: fixed;
-    position: relative;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    margin-left: 50px;
->>>>>>> bfddd20d12da3f7049353f4c21adf2b6f60d23ae
 }

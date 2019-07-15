@@ -19,6 +19,8 @@ export class ModalLoginComponent implements OnInit {
   loginForm: FormGroup;
   mostrar:Boolean=true;
 
+  //cargo: string;
+
   constructor(private formBuilder: FormBuilder,private router: Router, private service: UsuarioService) { }
 
   ngOnInit() {
@@ -40,8 +42,23 @@ export class ModalLoginComponent implements OnInit {
       if(usuario.usuario== this.loginForm.value.usuario && usuario.contrase==this.loginForm.value.contra){
         console.log("Ingresaste");
         this.error=false;
-        this. mostrar=false;
-        this.router.navigate(['/gerente',usuario.id]);
+        this.mostrar=false;
+
+        //alert(usuario.cargo);
+        //console.log(usuario.cargo);
+
+        if(usuario.cargo.toString()=="gerente"){
+          alert(usuario.cargo);
+          alert("VistaGerente");
+          this.router.navigate(['/gerente',usuario.id]);
+        }else if(usuario.cargo.toString()=="cobrador"){
+          alert(usuario.cargo);
+          alert("VistaCobrador");
+          this.router.navigate(['/cobrador',usuario.id]);
+        }else{
+          alert(usuario.cargo);
+          alert("GG");
+        }
 
         $('#modal_login').modal('toggle');
         

@@ -1,6 +1,5 @@
 <app-sidebar></app-sidebar>
 <div class="contenido">
-<<<<<<< HEAD
     <div class="position container">
         <div class="col">
             <h2 class="text-center">Reporte Cobranza</h2>
@@ -33,29 +32,4 @@
             <pagination-controls (pageChange)="pageActual = $event"></pagination-controls>
         </div>
     </div>
-=======
-<div class="position">
-    <h2 class="text-center">HELOUDA GG</h2>
-    <hr>
-    <!--<button class="btn btn-primary" (click)="addCobranza()">Agregar</button>--->
-    <table class="table table-striped">
-        <thead class="thead-dark">
-            <tr>
-                <th class="hidden">Id</th>
-                <th>Cliente</th>
-                <th>Banco</th>
-                <th>Estado</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let cobranza of cobranzas">
-                <td class="hidden">{{ cobranza.llave }}</td>
-                <td>{{ cobranza.cliente }}</td>
-                <td>{{ cobranza.banco }}</td>
-                <td>{{ cobranza.estado }}</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
->>>>>>> bfddd20d12da3f7049353f4c21adf2b6f60d23ae
 </div>

@@ -68,6 +68,7 @@ import { ListCobranzaComponent } from './components/list-cobranza/list-cobranza.
     ContactComponent,
     GerenteComponent,
     SidebarComponent,
+    Sidebar2Component,
     HomeComponent,
     EmpleadosComponent,
     LibroComponent,
