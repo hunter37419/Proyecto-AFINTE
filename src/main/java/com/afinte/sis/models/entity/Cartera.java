@@ -28,8 +28,8 @@ public class Cartera{
 		@Column(name="ruc")
 		private String ruc;
 		
-		@Column(name="codigo_sip")
-		private Integer codigo_sip;
+		@Column(name="codigosip")
+		private Integer codigosip;
 		
 		@Column(name="razon_social")
 		private String razon_social;
@@ -90,12 +90,17 @@ public class Cartera{
 		public void setRuc(String ruc) {
 			this.ruc = ruc;
 		}
-		public Integer getCodigo_sip() {
-			return codigo_sip;
+	
+	
+
+		public Integer getCodigosip() {
+			return codigosip;
 		}
-		public void setCodigo_sip(int codigo_sip) {
-			this.codigo_sip = codigo_sip;
+
+		public void setCodigosip(Integer codigosip) {
+			this.codigosip = codigosip;
 		}
+
 		public String getRazon_social() {
 			return razon_social;
 		}
@@ -156,9 +161,15 @@ public class Cartera{
 		public void setSaldo_equi(BigDecimal saldo_equi) {
 			this.saldo_equi = saldo_equi;
 		}
-		@Override 
+
+		@Override
 		public String toString() {
-			return "Cartera [llave=" + llave + ", empresa=" + empresa + ", sucursal=" + sucursal + ", ruc=" + ruc + ", codigo_sip="+codigo_sip+" , razon_social="+razon_social+" , direccion="+direccion+ ", tipo_doc="+tipo_doc+" , factura="+factura+" , fecha_emi="+fecha_emi+" , fecha_venc="+fecha_venc+" , moneda="+moneda+" , importe_og="+importe_og+" ,saldo_act="+saldo_act+" ,saldo_equi="+saldo_equi+ "]";
+			return "Cartera [llave=" + llave + ", empresa=" + empresa + ", sucursal=" + sucursal + ", ruc=" + ruc
+					+ ", codigo_sip=" + codigosip + ", razon_social=" + razon_social + ", direccion=" + direccion
+					+ ", tipo_doc=" + tipo_doc + ", factura=" + factura + ", fecha_emi=" + fecha_emi + ", fecha_venc="
+					+ fecha_venc + ", moneda=" + moneda + ", importe_og=" + importe_og + ", saldo_act=" + saldo_act
+					+ ", saldo_equi=" + saldo_equi + "]";
 		}
+	
 
 	}

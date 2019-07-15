@@ -9,5 +9,6 @@ import com.afinte.sis.models.entity.Cartera;
 public interface CarteraDAO extends CrudRepository<Cartera, Integer> {
 	
 	List<Cartera> findByRucStartingWith(String ruc);
+	List<Cartera> findByRucAndCodigosip(String ruc, Integer codigosip);
 
 }

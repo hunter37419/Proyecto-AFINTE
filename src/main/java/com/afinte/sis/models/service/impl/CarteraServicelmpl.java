@@ -51,7 +51,12 @@ public class CarteraServicelmpl implements CarteraService {
 			
 		}
 
-
+		@Override
+		@Transactional
+		public List<Cartera> findByRucAndCodigosip(String ruc, Integer codigosip) {
+			// TODO Auto-generated method stub
+			return (List<Cartera>) carteraDAO.findByRucAndCodigosip( ruc, codigosip);
+		}
 
 		@Override
 		@Transactional

@@ -15,4 +15,6 @@ public interface CarteraService {
 	public void deleteCartera(Integer theId);
 	
 	public List<Cartera> findByRuc( String ruc);
+	
+	public List<Cartera> findByRucAndCodigosip(String ruc, Integer codigosip);
 }
