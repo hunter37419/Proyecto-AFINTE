@@ -37,4 +37,13 @@ export class CobranzaService {
   deleteCobranza(id: number): Observable<Cobranza> {
     return this.http.delete<Cobranza>(`${this.baseUrl}/${id}`, {headers: this.httpHeaders});
   }
+
+  //
+  findbyRazonSocial(cliente: string){
+    return this.http.get(this.baseUrl + "/cliente/" + cliente).pipe(
+      map(data => data as Cobranza[])
+    );
+  }
+
+
 }

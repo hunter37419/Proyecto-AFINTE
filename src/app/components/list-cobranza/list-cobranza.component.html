@@ -1,26 +1,35 @@
 <app-sidebar></app-sidebar>
-<div class="container">
-<div class="col">
-    <h2 class="text-center">HELOUDA GG</h2>
-    <hr>
-    <!--<button class="btn btn-primary" (click)="addCobranza()">Agregar</button>--->
-    <table class="table table-striped">
-        <thead class="thead-dark">
-            <tr>
-                <th class="hidden">Id</th>
-                <th>Cliente</th>
-                <th>Banco</th>
-                <th>Estado</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let cobranza of cobranzas">
-                <td class="hidden">{{ cobranza.llave }}</td>
-                <td>{{ cobranza.cliente }}</td>
-                <td>{{ cobranza.banco }}</td>
-                <td>{{ cobranza.estado }}</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+<div class="contenido">
+    <div class="position container">
+        <div class="col">
+            <h2 class="text-center">Reporte Cobranza</h2>
+            <hr>
+            <!--<button class="btn btn-primary" (click)="addCobranza()">Agregar</button>--->
+
+            <div class="form-group row col-sm-6">
+                <label for="ruc" class="col-sm-4 col-form-label" >Razón Social</label>
+                <input type="text" (keyup)="onKey($event)" id="ruc" class="form-control col-sm-8">
+            </div><br>
+
+            <table class="table table-bordered table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th class="hidden">Id</th>
+                        <th>Cliente</th>
+                        <th>Banco</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-light">
+                    <tr *ngFor="let cobranza of cobranzas | paginate: { itemsPerPage: 10, currentPage: pageActual }">
+                        <td class="hidden">{{ cobranza.llave }}</td>
+                        <td>{{ cobranza.cliente }}</td>
+                        <td>{{ cobranza.banco }}</td>
+                        <td>{{ cobranza.estado }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <pagination-controls (pageChange)="pageActual = $event"></pagination-controls>
+        </div>
+    </div>
 </div>

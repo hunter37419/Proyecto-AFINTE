@@ -112,7 +112,7 @@ export class CobranzaComponent implements OnInit {
   	      let elem = $(elemento);
   	      let cobranza = new Cobranza();
   	      cobranza.cliente = elem.children('td').eq(4).text();
-          cobranza.sucursal = elem.children('td').eq(6).text();
+          cobranza.sucursal = elem.children('td').eq(5).text();
           cobranza.cod_cliente = parseInt(elem.children('td').eq(3).text());
   	      cobranza.banco = elem.children('td').eq(1).text();
           cobranza.factura = elem.children('td').eq(16).text();

@@ -16,10 +16,11 @@ export class ListCobranzaComponent implements OnInit {
   constructor(private router: Router, private service: CobranzaService) {}
 
   ngOnInit() {
-    console.log(this.cobranzas);
-    this.service.getCobranzas().subscribe(data => (this.cobranzas = data));
+    //console.log(this.cobranzas);
+    //this.service.getCobranzas().subscribe(data => (this.cobranzas = data));
   }
 
+  //
   deletecobranza(cobranza: Cobranza): void {
         this.service.deleteCobranza(cobranza.llave).subscribe(data => {
           this.cobranzas = this.cobranzas.filter(c => c !== cobranza);
@@ -31,4 +32,21 @@ export class ListCobranzaComponent implements OnInit {
     localStorage.setItem('editcobranzaId', cobranza.llave.toString());
     this.router.navigate(['edit-cobranza']);
   }
+  //
+
+  findByRazonSocial(cliente: string){
+    this.service.findbyRazonSocial(cliente).subscribe(data =>(this.cobranzas = data));
+
+    //console.log(this.cartera);
+  }
+
+  onKey(event: any) { 
+     
+     if(event.target.value != ""){
+       this.findByRazonSocial(event.target.value);
+     }
+
+  }
+
+
 }

@@ -38,4 +38,17 @@ export class CarteraService {
   deleteCustomer(id: number): Observable<Cartera> {
     return this.http.delete<Cartera>(`${this.baseUrl}/${id}`, {headers: this.httpHeaders});
   }
+
+  buscarxRuc(ruc: string): Observable<Cartera[]>{
+    console.log("works1");
+    return this.http.get(this.baseUrl + '/ruc/' + ruc).pipe(
+        map(data => data as Cartera[])
+      );
+  }
+
+  buscarxRuc2(ruc: string): Observable<Cartera[]>{
+    console.log("works2");
+    return this.http.get<Cartera[]>(this.baseUrl + '/ruc/' + ruc);
+  }
+
 }

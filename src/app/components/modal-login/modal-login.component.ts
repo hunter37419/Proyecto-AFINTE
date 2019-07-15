@@ -30,7 +30,6 @@ export class ModalLoginComponent implements OnInit {
     });
   }
 
-  
 
   logearse(){
     
@@ -45,7 +44,7 @@ export class ModalLoginComponent implements OnInit {
         this.router.navigate(['/gerente',usuario.id]);
 
         $('#modal_login').modal('toggle');
-        $("#login").hide();
+        
         $("#logout").show();
         break;
       }else{
