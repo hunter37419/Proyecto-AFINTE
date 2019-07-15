@@ -46,22 +46,16 @@ export class ModalLoginComponent implements OnInit {
 
         //alert(usuario.cargo);
         //console.log(usuario.cargo);
-
-        if(usuario.cargo.toString()=="gerente"){
-          alert(usuario.cargo);
-          alert("VistaGerente");
+        
+        if(usuario.cargo.trim()=="gerente"){
           this.router.navigate(['/gerente',usuario.id]);
-        }else if(usuario.cargo.toString()=="cobrador"){
-          alert(usuario.cargo);
-          alert("VistaCobrador");
-          this.router.navigate(['/cobrador',usuario.id]);
         }else{
-          alert(usuario.cargo);
-          alert("GG");
+          this.router.navigate(['/cobrador',usuario.id]);
         }
 
         $('#modal_login').modal('toggle');
         
+        $("#login").hide();
         $("#logout").show();
         break;
       }else{
