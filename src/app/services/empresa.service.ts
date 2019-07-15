@@ -26,6 +26,10 @@ export class EmpresaService {
     return this.http.get<Empresa>(`${this.baseUrl}/${id}`);
   }
 
+  getEmpresaxRuc(ruc: string): Observable<Empresa> {
+    return this.http.get<Empresa>(`${this.baseUrl}/ruc/${ruc}`);
+  }
+
   createEmpresa(empresa: Empresa): Observable<Empresa> {
     return this.http.post<Empresa>(this.baseUrl, empresa, {headers: this.httpHeaders});
   }

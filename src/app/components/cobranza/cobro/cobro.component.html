@@ -1,0 +1,51 @@
+<app-sidebar></app-sidebar>
+<div class="contenido">
+    <div class="position container contenido">
+
+        <div class="col">
+            <h2 class="text-center">Buscar empresa</h2>
+            <form [formGroup]="buscarEmpresa" (ngSubmit)="onSubmit()">
+
+                <div class="form-group">
+                    <label for="ruc">Ruc:</label>
+                    <input type="text" formControlName="ruc" placeholder="ruc" name="ruc" class="form-control" id="ruc" required>
+                </div>
+                <div class="form-group">
+                    <label for="codigo_sip">Codigo Sip:</label>
+                    <input type="text" formControlName="codigo_sip" placeholder="codigo_sip" name="codigo_sip" class="form-control" id="codigo_sip" required>
+                </div>
+                <button class="btn btn-success">Aceptar</button>
+                <button class="btn btn-primary" routerLink="list-customer">Regresar</button>
+            </form>
+            <hr>
+            <hr>
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Ruc</th>
+                        <th>Empresa</th>
+                        <th>Sucursal</th>
+                        <th>Saldo Actual</th>
+                        <th>Saldo Equi</th>
+                        <th>Accion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let carteras of registros | paginate: { itemsPerPage: 10, currentPage: pageActual }">
+                        <td>{{ carteras.ruc }}</td>
+                        <td>{{ carteras.empresa }}</td>
+                        <td>{{ carteras.sucursal }}</td>
+                        <td>{{ carteras.saldo_act }}</td>
+                        <td>{{ carteras.saldo_equi}}</td>
+                        <td>
+                            <button class="btn btn-success" [routerLink]="['/cobrar']"> Realizar pago</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+        </div>
+    </div>
+</div>

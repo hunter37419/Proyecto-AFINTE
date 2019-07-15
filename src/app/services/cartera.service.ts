@@ -27,6 +27,13 @@ export class CarteraService {
     return this.http.get<Cartera>(`${this.baseUrl}/${id}`);
   }
 
+  getCarteraxRucCodigo(ruc: string, codigosip: number): Observable<Cartera[]> {
+    return this.http.get(`${this.baseUrl}/${ruc}/${codigosip}`).pipe(
+      map(data => data as Cartera[])
+    );
+  }
+  
+
   createCustomer(customer: Cartera): Observable<Cartera> {
     return this.http.post<Cartera>(this.baseUrl, customer, {headers: this.httpHeaders});
   }

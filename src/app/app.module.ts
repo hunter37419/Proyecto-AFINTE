@@ -56,6 +56,7 @@ import { AsignarCustomerComponent } from './components/customer/asignar-customer
 import { AsignarCustomer2Component } from './components/customer/asignar-customer2/asignar-customer2.component';
 import { CobrarComponent } from './components/cobrar/cobrar.component';
 import { ListCobranzaComponent } from './components/list-cobranza/list-cobranza.component';
+import { CobroComponent } from './components/cobranza/cobro/cobro.component';
 
 @NgModule({
   declarations: [
@@ -93,6 +94,7 @@ import { ListCobranzaComponent } from './components/list-cobranza/list-cobranza.
     CobrarComponent,
     ListCobranzaComponent,
     CobradorComponent,
+    CobroComponent,
   ],
   imports: [
     HttpClientModule,

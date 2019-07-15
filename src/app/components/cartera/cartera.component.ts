@@ -4,6 +4,7 @@ import { Empresa} from '../../modals/Empresa';
 import * as XLSX from 'xlsx';
 import { CarteraService } from 'src/app/services/cartera.service';
 import { Router } from '@angular/router';
+import { EmpresaService } from 'src/app/services/empresa.service';
 
 declare var $:any;
 
@@ -23,7 +24,7 @@ export class CarteraComponent implements OnInit {
   private listacarteras = new Array();
   private listaEmpresas = new Array();
 
-  constructor( public router: Router, public service: CarteraService) {
+  constructor( public router: Router, public service: CarteraService,public Empresaservice: EmpresaService) {
     this.dtoptions = {
       pageLength:25,
       scrollY : 400,
@@ -178,5 +179,13 @@ export class CarteraComponent implements OnInit {
 			
 		  });
 		}
+
+		for (let empresas of this.listaEmpresas){
+			this.Empresaservice.createEmpresa(empresas)
+			  .subscribe(data => {
+				
+			  });
+			}
+		
 	  }
 }
