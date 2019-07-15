@@ -39,7 +39,7 @@ public class EmpresasController {
 			}
 			
 			@GetMapping("/empresa/ruc/{ruc}")
-			public List<Empresas> findByName(@PathVariable String ruc){
+			public List<Empresas> findByRuc(@PathVariable String ruc){
 				List<Empresas> empresas = empresaService.findByRuc(ruc);
 				//System.out.println(empresas);
 				return empresas;

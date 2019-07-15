@@ -41,4 +41,11 @@ public class CobranzaServiceImpl implements CobranzaService {
 
 		CobranzaDAO.deleteById(theId);
 	}
+
+	@Override
+	@Transactional
+	public List<Cobranza> findByCliente(String cliente) {
+		// TODO Auto-generated method stub
+		return CobranzaDAO.findByClienteContainingIgnoreCase(cliente);
+	}
 }

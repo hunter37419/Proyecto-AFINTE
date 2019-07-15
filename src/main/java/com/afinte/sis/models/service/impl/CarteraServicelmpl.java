@@ -50,4 +50,13 @@ public class CarteraServicelmpl implements CarteraService {
           carteraDAO.deleteById(theId);
 			
 		}
+
+
+
+		@Override
+		@Transactional
+		public List<Cartera> findByRuc(String ruc) {
+			// TODO Auto-generated method stub
+			return (List<Cartera>) carteraDAO.findByRucStartingWith(ruc);
+		}
 }

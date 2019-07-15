@@ -13,4 +13,6 @@ public interface CarteraService {
 	public Cartera getCartera(Integer theId);
 
 	public void deleteCartera(Integer theId);
+	
+	public List<Cartera> findByRuc( String ruc);
 }

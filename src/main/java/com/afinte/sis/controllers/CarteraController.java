@@ -40,6 +40,11 @@ public class CarteraController {
 
 		return cartera;
 	}
+	
+	@GetMapping("/carteras/ruc/{ruc}")
+	public List<Cartera> findByRuc(@PathVariable String ruc){
+		return carteraService.findByRuc(ruc);
+	}
 
 	// add mapping for POST /cobcierre - add new cobcierre
 

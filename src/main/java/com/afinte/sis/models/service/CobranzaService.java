@@ -5,6 +5,7 @@ import java.util.List;
 import com.afinte.sis.models.entity.Cobranza;
 
 public interface CobranzaService {
+	
 	public List<Cobranza> getCobranza();
 
 	public void saveCobranza(Cobranza Cobranza);
@@ -12,4 +13,6 @@ public interface CobranzaService {
 	public Cobranza getCobranza(Integer theId);
 
 	public void deleteCobranza(Integer theId);
+	
+	public List<Cobranza> findByCliente(String ruc);
 }

@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -35,6 +36,11 @@ public class CobranzaController {
 				Cobranza usuario = cobranzaService.getCobranza(cobranzaId);
 
 				return usuario;
+			}
+			
+			@GetMapping("/cobranza/cliente/{cliente}")
+			public List<Cobranza> findByCliente(@PathVariable String cliente){
+				return cobranzaService.findByCliente(cliente);
 			}
 			
 			@PostMapping("/cobranza")
