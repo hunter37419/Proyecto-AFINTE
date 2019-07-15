@@ -25,6 +25,7 @@ import { AsignarCustomer2Component } from './components/customer/asignar-custome
 import { ListCobranzaComponent } from './components/list-cobranza/list-cobranza.component';
 import { CobrarComponent } from './components/cobrar/cobrar.component';
 import { CobradorComponent } from './components/perfil/cobrador/cobrador.component';
+import { CobroComponent } from './components/cobranza/cobro/cobro.component';
 
 
 const routes: Routes = [
@@ -51,6 +52,7 @@ const routes: Routes = [
   { path: 'list-empresa', component: ListEmpresaComponent },
   { path: 'list-cobranza', component: ListCobranzaComponent },
   { path: 'cobrar', component: CobrarComponent },
+  { path: 'cobro', component: CobroComponent },
   { path: 'lista-cobranza-cierre', component: ListaCobranzaCierreComponent },
   {path: '**', pathMatch: 'full' , redirectTo: 'home'}
 ];
