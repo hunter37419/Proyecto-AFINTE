@@ -30,7 +30,7 @@
                         <th>Accion</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="bg-light text-dark">
                     <tr *ngFor="let carteras of registros | paginate: { itemsPerPage: 10, currentPage: pageActual }">
                         <td>{{ carteras.ruc }}</td>
                         <td>{{ carteras.empresa }}</td>
